@@ -1,0 +1,198 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="skySport" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a90d9"/>
+      <stop offset="60%" stop-color="#87CEEB"/>
+      <stop offset="100%" stop-color="#b8e4f0"/>
+    </linearGradient>
+    <linearGradient id="trackGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#CC5533"/>
+      <stop offset="100%" stop-color="#aa4422"/>
+    </linearGradient>
+    <linearGradient id="grassGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a8a2a"/>
+      <stop offset="100%" stop-color="#2a6a1a"/>
+    </linearGradient>
+    <linearGradient id="podiumGold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#C8A84E"/>
+    </linearGradient>
+    <linearGradient id="podiumSilver" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8E8E8"/>
+      <stop offset="100%" stop-color="#A0A0A0"/>
+    </linearGradient>
+    <linearGradient id="podiumBronze" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#CD7F32"/>
+      <stop offset="100%" stop-color="#8a5a2a"/>
+    </linearGradient>
+    <filter id="shadow6">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <linearGradient id="standGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8c4c0"/>
+      <stop offset="100%" stop-color="#a8a4a0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="600" fill="url(#skySport)"/>
+
+  <!-- Sun -->
+  <circle cx="680" cy="60" r="30" fill="#FFD700" opacity="0.8"/>
+  <circle cx="680" cy="60" r="40" fill="#FFD700" opacity="0.15"/>
+
+  <!-- Clouds -->
+  <g opacity="0.5">
+    <ellipse cx="150" cy="50" rx="50" ry="15" fill="#fff"/>
+    <ellipse cx="180" cy="45" rx="35" ry="12" fill="#fff"/>
+    <ellipse cx="120" cy="48" rx="30" ry="10" fill="#fff"/>
+  </g>
+  <g opacity="0.4">
+    <ellipse cx="500" cy="35" rx="40" ry="12" fill="#fff"/>
+    <ellipse cx="530" cy="30" rx="30" ry="10" fill="#fff"/>
+  </g>
+
+  <!-- Ground / grass -->
+  <rect x="0" y="350" width="800" height="250" fill="url(#grassGrad)"/>
+
+  <!-- Track (oval shape approximated) -->
+  <rect x="80" y="370" width="640" height="120" fill="url(#trackGrad)" rx="60"/>
+  <rect x="90" y="380" width="620" height="100" fill="url(#grassGrad)" rx="50"/>
+  <rect x="90" y="380" width="620" height="100" fill="none" stroke="#fff" stroke-width="1" opacity="0.3" rx="50"/>
+
+  <!-- Track lanes -->
+  <line x1="140" y1="395" x2="660" y2="395" stroke="#fff" stroke-width="0.8" opacity="0.4"/>
+  <line x1="140" y1="410" x2="660" y2="410" stroke="#fff" stroke-width="0.8" opacity="0.4"/>
+  <line x1="140" y1="425" x2="660" y2="425" stroke="#fff" stroke-width="0.8" opacity="0.4"/>
+  <line x1="140" y1="440" x2="660" y2="440" stroke="#fff" stroke-width="0.8" opacity="0.4"/>
+  <line x1="140" y1="455" x2="660" y2="455" stroke="#fff" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Start line -->
+  <line x1="140" y1="370" x2="140" y2="490" stroke="#fff" stroke-width="3"/>
+  <!-- Finish line -->
+  <line x1="660" y1="370" x2="660" y2="490" stroke="#fff" stroke-width="3"/>
+  <rect x="655" y="370" width="10" height="120" fill="#fff" opacity="0.3"/>
+
+  <!-- Runner 1 (mid-race) -->
+  <g>
+    <circle cx="350" cy="402" r="7" fill="#2a1a0a"/>
+    <ellipse cx="350" cy="412" rx="6" ry="10" fill="#FF4444"/>
+    <line x1="347" y1="408" x2="338" y2="398" stroke="#2a1a0a" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="353" y1="408" x2="362" y2="398" stroke="#2a1a0a" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="348" y1="420" x2="340" y2="430" stroke="#2a1a0a" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="352" y1="420" x2="360" y2="430" stroke="#2a1a0a" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Runner 2 -->
+  <g>
+    <circle cx="420" cy="417" r="7" fill="#3a1a0a"/>
+    <ellipse cx="420" cy="427" rx="6" ry="10" fill="#44AAFF"/>
+    <line x1="417" y1="423" x2="408" y2="413" stroke="#3a1a0a" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="423" y1="423" x2="432" y2="413" stroke="#3a1a0a" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="418" y1="435" x2="410" y2="445" stroke="#3a1a0a" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="422" y1="435" x2="430" y2="445" stroke="#3a1a0a" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Runner 3 -->
+  <g>
+    <circle cx="300" cy="432" r="7" fill="#1a2a0a"/>
+    <ellipse cx="300" cy="442" rx="6" ry="10" fill="#44BB44"/>
+    <line x1="297" y1="438" x2="288" y2="428" stroke="#1a2a0a" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="303" y1="438" x2="312" y2="428" stroke="#1a2a0a" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="298" y1="450" x2="290" y2="460" stroke="#1a2a0a" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="302" y1="450" x2="310" y2="460" stroke="#1a2a0a" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Runner 4 -->
+  <g>
+    <circle cx="500" cy="447" r="7" fill="#2a1a0a"/>
+    <ellipse cx="500" cy="457" rx="6" ry="10" fill="#FFB347"/>
+    <line x1="497" y1="453" x2="488" y2="443" stroke="#2a1a0a" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="503" y1="453" x2="512" y2="443" stroke="#2a1a0a" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="498" y1="465" x2="490" y2="475" stroke="#2a1a0a" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="502" y1="465" x2="510" y2="475" stroke="#2a1a0a" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Winners podium (right side) -->
+  <rect x="660" y="520" width="80" height="30" fill="url(#podiumBronze)" rx="2" filter="url(#shadow6)"/>
+  <rect x="670" y="495" width="60" height="55" fill="url(#podiumSilver)" rx="2" filter="url(#shadow6)"/>
+  <rect x="685" y="460" width="30" height="90" fill="url(#podiumGold)" rx="2" filter="url(#shadow6)"/>
+  <!-- Podium labels -->
+  <text x="700" y="542" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#fff" font-weight="bold">3</text>
+  <text x="700" y="517" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#fff" font-weight="bold">2</text>
+  <text x="700" y="482" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#fff" font-weight="bold">1</text>
+
+  <!-- Medal ribbons -->
+  <circle cx="700" cy="460" r="4" fill="#C8A84E"/>
+  <circle cx="700" cy="495" r="4" fill="#C0C0C0"/>
+  <circle cx="700" cy="520" r="4" fill="#CD7F32"/>
+
+  <!-- Goal posts (left side) -->
+  <rect x="50" y="370" width="4" height="120" fill="#fff"/>
+  <rect x="50" y="370" width="40" height="4" fill="#fff"/>
+  <rect x="86" y="370" width="4" height="50" fill="#fff"/>
+  <rect x="50" y="370" width="40" height="4" fill="#fff"/>
+  <!-- Net -->
+  <line x1="54" y1="374" x2="86" y2="374" stroke="#fff" stroke-width="0.5" opacity="0.3"/>
+  <line x1="54" y1="380" x2="86" y2="380" stroke="#fff" stroke-width="0.5" opacity="0.3"/>
+  <line x1="54" y1="386" x2="86" y2="386" stroke="#fff" stroke-width="0.5" opacity="0.3"/>
+  <line x1="54" y1="392" x2="86" y2="392" stroke="#fff" stroke-width="0.5" opacity="0.3"/>
+  <line x1="60" y1="374" x2="60" y2="420" stroke="#fff" stroke-width="0.5" opacity="0.3"/>
+  <line x1="70" y1="374" x2="70" y2="420" stroke="#fff" stroke-width="0.5" opacity="0.3"/>
+  <line x1="80" y1="374" x2="80" y2="420" stroke="#fff" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Spectator stands (top left) -->
+  <rect x="10" y="160" width="180" height="210" fill="url(#standGrad)" rx="4"/>
+  <rect x="10" y="160" width="180" height="210" fill="none" stroke="#888" stroke-width="1" rx="4"/>
+  <!-- Stand rows -->
+  <line x1="10" y1="195" x2="190" y2="195" stroke="#888" stroke-width="0.5"/>
+  <line x1="10" y1="230" x2="190" y2="230" stroke="#888" stroke-width="0.5"/>
+  <line x1="10" y1="265" x2="190" y2="265" stroke="#888" stroke-width="0.5"/>
+  <line x1="10" y1="300" x2="190" y2="300" stroke="#888" stroke-width="0.5"/>
+  <line x1="10" y1="335" x2="190" y2="335" stroke="#888" stroke-width="0.5"/>
+  <!-- Spectators -->
+  <circle cx="30" cy="180" r="5" fill="#2a1a0a"/>
+  <circle cx="50" cy="180" r="5" fill="#3a2a1a"/>
+  <circle cx="70" cy="180" r="5" fill="#1a2a0a"/>
+  <circle cx="90" cy="180" r="5" fill="#2a1a0a"/>
+  <circle cx="110" cy="180" r="5" fill="#3a2a1a"/>
+  <circle cx="130" cy="180" r="5" fill="#1a2a0a"/>
+  <circle cx="30" cy="215" r="5" fill="#2a1a0a"/>
+  <circle cx="50" cy="215" r="5" fill="#3a2a1a"/>
+  <circle cx="70" cy="215" r="5" fill="#1a2a0a"/>
+  <circle cx="90" cy="215" r="5" fill="#2a1a0a"/>
+  <circle cx="110" cy="215" r="5" fill="#3a2a1a"/>
+  <circle cx="130" cy="215" r="5" fill="#1a2a0a"/>
+  <circle cx="30" cy="250" r="5" fill="#2a1a0a"/>
+  <circle cx="50" cy="250" r="5" fill="#3a2a1a"/>
+  <circle cx="70" cy="250" r="5" fill="#1a2a0a"/>
+  <circle cx="90" cy="250" r="5" fill="#2a1a0a"/>
+  <circle cx="110" cy="250" r="5" fill="#3a2a1a"/>
+  <circle cx="130" cy="250" r="5" fill="#1a2a0a"/>
+
+  <!-- Flag -->
+  <rect x="190" y="170" width="3" height="60" fill="#C8A84E"/>
+  <rect x="193" y="170" width="30" height="20" fill="#FF9933" rx="1"/>
+  <!-- Flag pole top -->
+  <circle cx="191" cy="170" r="3" fill="#C8A84E"/>
+
+  <!-- College banner -->
+  <rect x="580" y="140" width="160" height="35" fill="#091525" rx="2" filter="url(#shadow6)"/>
+  <text x="660" y="156" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#C8A84E" font-weight="bold">GG COLLEGE</text>
+  <text x="660" y="168" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#fff">SPORTS DAY 2025</text>
+
+  <!-- Sports field markings -->
+  <circle cx="400" cy="430" r="30" fill="none" stroke="#fff" stroke-width="1" opacity="0.2"/>
+  <line x1="400" y1="400" x2="400" y2="460" stroke="#fff" stroke-width="0.5" opacity="0.2"/>
+  <line x1="370" y1="430" x2="430" y2="430" stroke="#fff" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Bottom grass texture -->
+  <rect x="0" y="560" width="800" height="40" fill="#2a6a1a"/>
+
+  <!-- Watermark -->
+  <text x="400" y="580" text-anchor="middle" font-family="Georgia,serif" font-size="20" fill="#fff" opacity="0.08" font-weight="bold">GG COLLEGE</text>
+
+  <!-- Frame -->
+  <rect x="5" y="5" width="790" height="590" fill="none" stroke="#C8A84E" stroke-width="2" rx="6"/>
+  <rect x="8" y="8" width="784" height="584" fill="none" stroke="#C8A84E" stroke-width="0.5" rx="4" opacity="0.5"/>
+</svg>

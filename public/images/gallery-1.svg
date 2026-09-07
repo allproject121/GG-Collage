@@ -1,0 +1,230 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#091525"/>
+      <stop offset="50%" stop-color="#0f2440"/>
+      <stop offset="100%" stop-color="#1a3a5c"/>
+    </linearGradient>
+    <linearGradient id="stage" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C8A84E"/>
+      <stop offset="100%" stop-color="#a8882e"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2a4a"/>
+      <stop offset="100%" stop-color="#0a1a3a"/>
+    </linearGradient>
+    <radialGradient id="spotlight" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="rgba(200,168,78,0.15)"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <linearGradient id="podiumGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#C8A84E"/>
+      <stop offset="100%" stop-color="#7a6420"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <linearGradient id="flagGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C8A84E"/>
+      <stop offset="100%" stop-color="#091525"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg1)"/>
+  <rect width="800" height="600" fill="url(#spotlight)"/>
+
+  <!-- Back wall with panels -->
+  <rect x="20" y="10" width="760" height="200" fill="#0d1f38" rx="4"/>
+  <rect x="30" y="18" width="740" height="184" fill="none" stroke="#C8A84E" stroke-width="1" rx="2" opacity="0.3"/>
+  <!-- Decorative arches on wall -->
+  <path d="M80 202 Q80 60 160 60 Q240 60 240 202" fill="none" stroke="#C8A84E" stroke-width="1" opacity="0.15"/>
+  <path d="M280 202 Q280 60 360 60 Q440 60 440 202" fill="none" stroke="#C8A84E" stroke-width="1" opacity="0.15"/>
+  <path d="M480 202 Q480 60 560 60 Q640 60 640 202" fill="none" stroke="#C8A84E" stroke-width="1" opacity="0.15"/>
+  <path d="M680 202 Q680 60 760 60 Q840 60 840 202" fill="none" stroke="#C8A84E" stroke-width="1" opacity="0.15"/>
+
+  <!-- Conference Banner top -->
+  <rect x="100" y="15" width="600" height="40" fill="#C8A84E" rx="4" filter="url(#shadow)"/>
+  <text x="400" y="42" text-anchor="middle" font-family="Georgia,serif" font-size="20" fill="#091525" font-weight="bold" letter-spacing="4">INTERNATIONAL CONFERENCE 2025</text>
+
+  <!-- Projector Screen -->
+  <rect x="300" y="70" width="200" height="130" fill="url(#screen)" rx="3" filter="url(#shadow)"/>
+  <rect x="305" y="75" width="190" height="120" fill="none" stroke="#C8A84E" stroke-width="1.5" rx="2"/>
+  <!-- Graph on screen -->
+  <polyline points="320,180 350,160 380,170 410,140 440,150 470,120" fill="none" stroke="#4CAF50" stroke-width="2"/>
+  <polyline points="320,180 350,170 380,165 410,155 440,145 470,135" fill="none" stroke="#C8A84E" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="320" cy="180" r="2" fill="#4CAF50"/>
+  <circle cx="350" cy="160" r="2" fill="#4CAF50"/>
+  <circle cx="380" cy="170" r="2" fill="#4CAF50"/>
+  <circle cx="410" cy="140" r="2" fill="#4CAF50"/>
+  <circle cx="440" cy="150" r="2" fill="#4CAF50"/>
+  <circle cx="470" cy="120" r="2" fill="#4CAF50"/>
+  <!-- Screen title -->
+  <rect x="315" y="80" width="170" height="16" fill="#0a2a4a" rx="1"/>
+  <text x="400" y="92" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" fill="#C8A84E">Global Education Summit</text>
+
+  <!-- Stage floor -->
+  <rect x="50" y="210" width="700" height="50" fill="url(#stage)" rx="2" filter="url(#shadow)"/>
+  <rect x="50" y="210" width="700" height="50" fill="none" stroke="#ffd700" stroke-width="0.5" opacity="0.3"/>
+  <!-- Stage front decorative line -->
+  <line x1="60" y1="235" x2="740" y2="235" stroke="#091525" stroke-width="1" opacity="0.3"/>
+  <line x1="60" y1="250" x2="740" y2="250" stroke="#091525" stroke-width="1" opacity="0.3"/>
+
+  <!-- Podium -->
+  <rect x="360" y="220" width="80" height="40" fill="url(#podiumGrad)" rx="3" filter="url(#shadow)"/>
+  <rect x="365" y="225" width="70" height="30" fill="none" stroke="#fff" stroke-width="0.5" opacity="0.3"/>
+  <!-- Podium logo -->
+  <text x="400" y="247" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#091525" font-weight="bold">GG</text>
+  <!-- Microphone -->
+  <line x1="400" y1="220" x2="400" y2="205" stroke="#888" stroke-width="2"/>
+  <circle cx="400" cy="203" r="4" fill="#555"/>
+  <ellipse cx="400" cy="200" rx="3" ry="5" fill="#333"/>
+
+  <!-- Flags on stage sides -->
+  <rect x="100" y="200" width="3" height="60" fill="#C8A84E"/>
+  <rect x="697" y="200" width="3" height="60" fill="#C8A84E"/>
+  <!-- Left flag -->
+  <rect x="85" y="190" width="28" height="20" fill="url(#flagGrad)" rx="1"/>
+  <rect x="85" y="190" width="28" height="7" fill="#C8A84E" opacity="0.5"/>
+  <!-- Right flag -->
+  <rect x="687" y="190" width="28" height="20" fill="url(#flagGrad)" rx="1"/>
+  <rect x="687" y="190" width="28" height="7" fill="#C8A84E" opacity="0.5"/>
+
+  <!-- Audience rows -->
+  <!-- Row 1 -->
+  <g opacity="0.85">
+    <rect x="50" y="280" width="700" height="45" fill="#0d1f38" rx="2"/>
+    <!-- Audience heads row 1 -->
+    <circle cx="90" cy="295" r="8" fill="#2a3a5a"/>
+    <rect x="84" y="303" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="130" cy="295" r="8" fill="#2a3a5a"/>
+    <rect x="124" y="303" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="170" cy="295" r="8" fill="#2a3a5a"/>
+    <rect x="164" y="303" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="210" cy="295" r="8" fill="#2a3a5a"/>
+    <rect x="204" y="303" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="250" cy="295" r="8" fill="#2a3a5a"/>
+    <rect x="244" y="303" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="290" cy="295" r="8" fill="#2a3a5a"/>
+    <rect x="284" y="303" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="330" cy="295" r="8" fill="#2a3a5a"/>
+    <rect x="324" y="303" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="370" cy="295" r="8" fill="#2a3a5a"/>
+    <rect x="364" y="303" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="410" cy="295" r="8" fill="#2a3a5a"/>
+    <rect x="404" y="303" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="450" cy="295" r="8" fill="#2a3a5a"/>
+    <rect x="444" y="303" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="490" cy="295" r="8" fill="#2a3a5a"/>
+    <rect x="484" y="303" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="530" cy="295" r="8" fill="#2a3a5a"/>
+    <rect x="524" y="303" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="570" cy="295" r="8" fill="#2a3a5a"/>
+    <rect x="564" y="303" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="610" cy="295" r="8" fill="#2a3a5a"/>
+    <rect x="604" y="303" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="650" cy="295" r="8" fill="#2a3a5a"/>
+    <rect x="644" y="303" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="690" cy="295" r="8" fill="#2a3a5a"/>
+    <rect x="684" y="303" width="12" height="18" fill="#1a2a4a" rx="2"/>
+  </g>
+
+  <!-- Row 2 -->
+  <g opacity="0.75">
+    <rect x="50" y="335" width="700" height="45" fill="#0a1a30" rx="2"/>
+    <circle cx="90" cy="350" r="8" fill="#2a3a5a"/>
+    <rect x="84" y="358" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="130" cy="350" r="8" fill="#2a3a5a"/>
+    <rect x="124" y="358" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="170" cy="350" r="8" fill="#2a3a5a"/>
+    <rect x="164" y="358" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="210" cy="350" r="8" fill="#2a3a5a"/>
+    <rect x="204" y="358" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="250" cy="350" r="8" fill="#2a3a5a"/>
+    <rect x="244" y="358" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="290" cy="350" r="8" fill="#2a3a5a"/>
+    <rect x="284" y="358" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="330" cy="350" r="8" fill="#2a3a5a"/>
+    <rect x="324" y="358" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="370" cy="350" r="8" fill="#2a3a5a"/>
+    <rect x="364" y="358" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="410" cy="350" r="8" fill="#2a3a5a"/>
+    <rect x="404" y="358" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="450" cy="350" r="8" fill="#2a3a5a"/>
+    <rect x="444" y="358" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="490" cy="350" r="8" fill="#2a3a5a"/>
+    <rect x="484" y="358" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="530" cy="350" r="8" fill="#2a3a5a"/>
+    <rect x="524" y="358" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="570" cy="350" r="8" fill="#2a3a5a"/>
+    <rect x="564" y="358" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="610" cy="350" r="8" fill="#2a3a5a"/>
+    <rect x="604" y="358" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="650" cy="350" r="8" fill="#2a3a5a"/>
+    <rect x="644" y="358" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="690" cy="350" r="8" fill="#2a3a5a"/>
+    <rect x="684" y="358" width="12" height="18" fill="#1a2a4a" rx="2"/>
+  </g>
+
+  <!-- Row 3 -->
+  <g opacity="0.65">
+    <rect x="50" y="390" width="700" height="45" fill="#081528" rx="2"/>
+    <circle cx="90" cy="405" r="8" fill="#2a3a5a"/>
+    <rect x="84" y="413" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="130" cy="405" r="8" fill="#2a3a5a"/>
+    <rect x="124" y="413" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="170" cy="405" r="8" fill="#2a3a5a"/>
+    <rect x="164" y="413" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="210" cy="405" r="8" fill="#2a3a5a"/>
+    <rect x="204" y="413" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="250" cy="405" r="8" fill="#2a3a5a"/>
+    <rect x="244" y="413" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="290" cy="405" r="8" fill="#2a3a5a"/>
+    <rect x="284" y="413" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="330" cy="405" r="8" fill="#2a3a5a"/>
+    <rect x="324" y="413" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="370" cy="405" r="8" fill="#2a3a5a"/>
+    <rect x="364" y="413" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="410" cy="405" r="8" fill="#2a3a5a"/>
+    <rect x="404" y="413" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="450" cy="405" r="8" fill="#2a3a5a"/>
+    <rect x="444" y="413" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="490" cy="405" r="8" fill="#2a3a5a"/>
+    <rect x="484" y="413" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="530" cy="405" r="8" fill="#2a3a5a"/>
+    <rect x="524" y="413" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="570" cy="405" r="8" fill="#2a3a5a"/>
+    <rect x="564" y="413" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="610" cy="405" r="8" fill="#2a3a5a"/>
+    <rect x="604" y="413" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="650" cy="405" r="8" fill="#2a3a5a"/>
+    <rect x="644" y="413" width="12" height="18" fill="#1a2a4a" rx="2"/>
+    <circle cx="690" cy="405" r="8" fill="#2a3a5a"/>
+    <rect x="684" y="413" width="12" height="18" fill="#1a2a4a" rx="2"/>
+  </g>
+
+  <!-- Side decorative columns -->
+  <rect x="15" y="210" width="25" height="390" fill="#0d1f38" rx="2"/>
+  <rect x="15" y="210" width="25" height="390" fill="none" stroke="#C8A84E" stroke-width="1" rx="2" opacity="0.3"/>
+  <rect x="760" y="210" width="25" height="390" fill="#0d1f38" rx="2"/>
+  <rect x="760" y="210" width="25" height="390" fill="none" stroke="#C8A84E" stroke-width="1" rx="2" opacity="0.3"/>
+
+  <!-- Floor pattern -->
+  <rect x="50" y="460" width="700" height="140" fill="#0a1a30"/>
+  <path d="M50 480 L750 480 M50 500 L750 500 M50 520 L750 520 M50 540 L750 540 M50 560 L750 560 M50 580 L750 580" stroke="#C8A84E" stroke-width="0.5" opacity="0.1"/>
+
+  <!-- GG College watermark -->
+  <text x="400" y="550" text-anchor="middle" font-family="Georgia,serif" font-size="14" fill="#C8A84E" opacity="0.2" font-weight="bold" letter-spacing="6">GG COLLEGE</text>
+
+  <!-- Chandelier/lighting -->
+  <path d="M350 10 Q400 35 450 10" fill="none" stroke="#C8A84E" stroke-width="1.5" opacity="0.4"/>
+  <path d="M370 10 L370 25" stroke="#C8A84E" stroke-width="1" opacity="0.3"/>
+  <path d="M400 10 L400 30" stroke="#C8A84E" stroke-width="1.5" opacity="0.4"/>
+  <path d="M430 10 L430 25" stroke="#C8A84E" stroke-width="1" opacity="0.3"/>
+  <circle cx="370" cy="27" r="3" fill="#C8A84E" opacity="0.5"/>
+  <circle cx="400" cy="32" r="4" fill="#C8A84E" opacity="0.6"/>
+  <circle cx="430" cy="27" r="3" fill="#C8A84E" opacity="0.5"/>
+
+  <!-- Border frame -->
+  <rect x="5" y="5" width="790" height="590" fill="none" stroke="#C8A84E" stroke-width="2" rx="6"/>
+  <rect x="8" y="8" width="784" height="584" fill="none" stroke="#C8A84E" stroke-width="0.5" rx="4" opacity="0.5"/>
+</svg>

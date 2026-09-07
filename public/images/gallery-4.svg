@@ -1,0 +1,311 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#091525"/>
+      <stop offset="60%" stop-color="#0f2440"/>
+      <stop offset="100%" stop-color="#1a3a5c"/>
+    </linearGradient>
+    <linearGradient id="stageGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C8A84E"/>
+      <stop offset="50%" stop-color="#a8882e"/>
+      <stop offset="100%" stop-color="#7a6420"/>
+    </linearGradient>
+    <linearGradient id="curtainGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8a0000"/>
+      <stop offset="15%" stop-color="#CC0000"/>
+      <stop offset="50%" stop-color="#aa0000"/>
+      <stop offset="85%" stop-color="#CC0000"/>
+      <stop offset="100%" stop-color="#8a0000"/>
+    </linearGradient>
+    <linearGradient id="gownGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#091525"/>
+      <stop offset="100%" stop-color="#0a1a30"/>
+    </linearGradient>
+    <radialGradient id="spotlightConv" cx="50%" cy="0%" r="70%">
+      <stop offset="0%" stop-color="rgba(200,168,78,0.12)"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <filter id="shadow4">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <linearGradient id="crestGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#C8A84E"/>
+      <stop offset="100%" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+  <rect width="800" height="600" fill="url(#spotlightConv)"/>
+
+  <!-- Curtains -->
+  <rect x="0" y="0" width="60" height="600" fill="url(#curtainGrad)" opacity="0.8"/>
+  <rect x="740" y="0" width="60" height="600" fill="url(#curtainGrad)" opacity="0.8"/>
+  <!-- Curtain top valance -->
+  <path d="M0 0 Q30 40 60 0" fill="url(#curtainGrad)" opacity="0.7"/>
+  <path d="M740 0 Q770 40 800 0" fill="url(#curtainGrad)" opacity="0.7"/>
+  <path d="M60 0 Q200 35 400 35 Q600 35 740 0" fill="url(#curtainGrad)" opacity="0.6"/>
+  <!-- Curtain folds -->
+  <line x1="15" y1="0" x2="15" y2="600" stroke="#600" stroke-width="1" opacity="0.3"/>
+  <line x1="30" y1="0" x2="30" y2="600" stroke="#600" stroke-width="1" opacity="0.3"/>
+  <line x1="45" y1="0" x2="45" y2="600" stroke="#600" stroke-width="1" opacity="0.3"/>
+  <line x1="755" y1="0" x2="755" y2="600" stroke="#600" stroke-width="1" opacity="0.3"/>
+  <line x1="770" y1="0" x2="770" y2="600" stroke="#600" stroke-width="1" opacity="0.3"/>
+  <line x1="785" y1="0" x2="785" y2="600" stroke="#600" stroke-width="1" opacity="0.3"/>
+
+  <!-- Decorative backdrop -->
+  <rect x="100" y="30" width="600" height="180" fill="#0d1f38" rx="4"/>
+  <rect x="110" y="40" width="580" height="160" fill="none" stroke="#C8A84E" stroke-width="1.5" rx="3" opacity="0.4"/>
+
+  <!-- College Crest central -->
+  <circle cx="400" cy="100" r="40" fill="none" stroke="#C8A84E" stroke-width="2"/>
+  <circle cx="400" cy="100" r="35" fill="none" stroke="#C8A84E" stroke-width="1" opacity="0.5"/>
+  <circle cx="400" cy="100" r="30" fill="#091525"/>
+  <!-- Crest inner design -->
+  <path d="M370 100 L390 80 L410 80 L430 100 L410 120 L390 120 Z" fill="none" stroke="#C8A84E" stroke-width="1.5"/>
+  <text x="400" y="97" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#C8A84E" font-weight="bold">GG</text>
+  <text x="400" y="110" text-anchor="middle" font-family="Arial,sans-serif" font-size="5" fill="#C8A84E">EST. 1965</text>
+
+  <!-- Decorative lines from crest -->
+  <line x1="200" y1="100" x2="360" y2="100" stroke="#C8A84E" stroke-width="1" opacity="0.3"/>
+  <line x1="440" y1="100" x2="600" y2="100" stroke="#C8A84E" stroke-width="1" opacity="0.3"/>
+
+  <!-- Convocation text -->
+  <text x="400" y="155" text-anchor="middle" font-family="Georgia,serif" font-size="22" fill="#C8A84E" font-weight="bold" letter-spacing="4">CONVOCATION</text>
+  <text x="400" y="175" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#C8A84E" letter-spacing="6">BATCH 2024-2025</text>
+
+  <!-- Stage -->
+  <rect x="100" y="210" width="600" height="50" fill="url(#stageGrad)" rx="2" filter="url(#shadow4)"/>
+  <rect x="100" y="210" width="600" height="50" fill="none" stroke="#ffd700" stroke-width="0.5" opacity="0.3"/>
+  <!-- Stage front border -->
+  <rect x="100" y="255" width="600" height="8" fill="#091525" opacity="0.5"/>
+  <line x1="110" y1="232" x2="690" y2="232" stroke="#091525" stroke-width="0.5" opacity="0.3"/>
+  <line x1="110" y1="242" x2="690" y2="242" stroke="#091525" stroke-width="0.5" opacity="0.3"/>
+  <line x1="110" y1="252" x2="690" y2="252" stroke="#091525" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Dignitaries seated on stage -->
+  <!-- Chair 1 (left) -->
+  <rect x="160" y="220" width="30" height="35" fill="#1a2a4a" rx="2"/>
+  <circle cx="175" cy="228" r="6" fill="#3a2a1a"/>
+  <rect x="170" y="234" width="10" height="18" fill="#1a2a4a" rx="1"/>
+  <!-- Chair 2 -->
+  <rect x="220" y="220" width="30" height="35" fill="#1a2a4a" rx="2"/>
+  <circle cx="235" cy="228" r="6" fill="#2a1a0a"/>
+  <rect x="230" y="234" width="10" height="18" fill="#1a2a4a" rx="1"/>
+  <!-- Chair 3 (center - chief guest) -->
+  <rect x="350" y="215" width="35" height="40" fill="#C8A84E" rx="2"/>
+  <circle cx="367" cy="223" r="7" fill="#2a1a0a"/>
+  <rect x="362" y="230" width="10" height="20" fill="#091525" rx="1"/>
+  <!-- Chair 4 -->
+  <rect x="550" y="220" width="30" height="35" fill="#1a2a4a" rx="2"/>
+  <circle cx="565" cy="228" r="6" fill="#3a2a1a"/>
+  <rect x="560" y="234" width="10" height="18" fill="#1a2a4a" rx="1"/>
+  <!-- Chair 5 -->
+  <rect x="610" y="220" width="30" height="35" fill="#1a2a4a" rx="2"/>
+  <circle cx="625" cy="228" r="6" fill="#2a1a0a"/>
+  <rect x="620" y="234" width="10" height="18" fill="#1a2a4a" rx="1"/>
+
+  <!-- Podium -->
+  <rect x="450" y="218" width="60" height="42" fill="#091525" rx="3" filter="url(#shadow4)"/>
+  <rect x="455" y="223" width="50" height="32" fill="none" stroke="#C8A84E" stroke-width="1" rx="2"/>
+  <text x="480" y="245" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#C8A84E" font-weight="bold">GG COLLEGE</text>
+  <!-- Mic -->
+  <line x1="480" y1="218" x2="480" y2="203" stroke="#888" stroke-width="2"/>
+  <circle cx="480" cy="201" r="4" fill="#555"/>
+
+  <!-- Graduates (rows on floor) -->
+  <!-- Row 1 graduates -->
+  <g>
+    <circle cx="130" cy="310" r="8" fill="#2a1a0a"/>
+    <rect x="125" y="318" width="10" height="25" fill="url(#gownGrad)" rx="1"/>
+    <!-- Cap -->
+    <rect x="123" y="305" width="14" height="3" fill="#091525"/>
+    <rect x="127" y="303" width="6" height="4" fill="#091525"/>
+    <line x1="133" y1="303" x2="136" y2="304" stroke="#C8A84E" stroke-width="0.5"/>
+
+    <circle cx="160" cy="310" r="8" fill="#3a2a1a"/>
+    <rect x="155" y="318" width="10" height="25" fill="url(#gownGrad)" rx="1"/>
+    <rect x="153" y="305" width="14" height="3" fill="#091525"/>
+    <rect x="157" y="303" width="6" height="4" fill="#091525"/>
+
+    <circle cx="190" cy="310" r="8" fill="#2a1a0a"/>
+    <rect x="185" y="318" width="10" height="25" fill="url(#gownGrad)" rx="1"/>
+    <rect x="183" y="305" width="14" height="3" fill="#091525"/>
+    <rect x="187" y="303" width="6" height="4" fill="#091525"/>
+
+    <circle cx="220" cy="310" r="8" fill="#3a2a1a"/>
+    <rect x="215" y="318" width="10" height="25" fill="url(#gownGrad)" rx="1"/>
+    <rect x="213" y="305" width="14" height="3" fill="#091525"/>
+    <rect x="217" y="303" width="6" height="4" fill="#091525"/>
+
+    <circle cx="250" cy="310" r="8" fill="#2a1a0a"/>
+    <rect x="245" y="318" width="10" height="25" fill="url(#gownGrad)" rx="1"/>
+    <rect x="243" y="305" width="14" height="3" fill="#091525"/>
+    <rect x="247" y="303" width="6" height="4" fill="#091525"/>
+
+    <circle cx="280" cy="310" r="8" fill="#3a2a1a"/>
+    <rect x="275" y="318" width="10" height="25" fill="url(#gownGrad)" rx="1"/>
+    <rect x="273" y="305" width="14" height="3" fill="#091525"/>
+    <rect x="277" y="303" width="6" height="4" fill="#091525"/>
+
+    <circle cx="310" cy="310" r="8" fill="#2a1a0a"/>
+    <rect x="305" y="318" width="10" height="25" fill="url(#gownGrad)" rx="1"/>
+    <rect x="303" y="305" width="14" height="3" fill="#091525"/>
+    <rect x="307" y="303" width="6" height="4" fill="#091525"/>
+
+    <circle cx="340" cy="310" r="8" fill="#3a2a1a"/>
+    <rect x="335" y="318" width="10" height="25" fill="url(#gownGrad)" rx="1"/>
+    <rect x="333" y="305" width="14" height="3" fill="#091525"/>
+    <rect x="337" y="303" width="6" height="4" fill="#091525"/>
+  </g>
+
+  <!-- Row 2 graduates -->
+  <g>
+    <circle cx="145" cy="360" r="8" fill="#3a2a1a"/>
+    <rect x="140" y="368" width="10" height="25" fill="url(#gownGrad)" rx="1"/>
+    <rect x="138" y="355" width="14" height="3" fill="#091525"/>
+    <rect x="142" y="353" width="6" height="4" fill="#091525"/>
+
+    <circle cx="175" cy="360" r="8" fill="#2a1a0a"/>
+    <rect x="170" y="368" width="10" height="25" fill="url(#gownGrad)" rx="1"/>
+    <rect x="168" y="355" width="14" height="3" fill="#091525"/>
+    <rect x="172" y="353" width="6" height="4" fill="#091525"/>
+
+    <circle cx="205" cy="360" r="8" fill="#3a2a1a"/>
+    <rect x="200" y="368" width="10" height="25" fill="url(#gownGrad)" rx="1"/>
+    <rect x="198" y="355" width="14" height="3" fill="#091525"/>
+    <rect x="202" y="353" width="6" height="4" fill="#091525"/>
+
+    <circle cx="235" cy="360" r="8" fill="#2a1a0a"/>
+    <rect x="230" y="368" width="10" height="25" fill="url(#gownGrad)" rx="1"/>
+    <rect x="228" y="355" width="14" height="3" fill="#091525"/>
+    <rect x="232" y="353" width="6" height="4" fill="#091525"/>
+
+    <circle cx="265" cy="360" r="8" fill="#3a2a1a"/>
+    <rect x="260" y="368" width="10" height="25" fill="url(#gownGrad)" rx="1"/>
+    <rect x="258" y="355" width="14" height="3" fill="#091525"/>
+    <rect x="262" y="353" width="6" height="4" fill="#091525"/>
+
+    <circle cx="295" cy="360" r="8" fill="#2a1a0a"/>
+    <rect x="290" y="368" width="10" height="25" fill="url(#gownGrad)" rx="1"/>
+    <rect x="288" y="355" width="14" height="3" fill="#091525"/>
+    <rect x="292" y="353" width="6" height="4" fill="#091525"/>
+
+    <circle cx="325" cy="360" r="8" fill="#3a2a1a"/>
+    <rect x="320" y="368" width="10" height="25" fill="url(#gownGrad)" rx="1"/>
+    <rect x="318" y="355" width="14" height="3" fill="#091525"/>
+    <rect x="322" y="353" width="6" height="4" fill="#091525"/>
+
+    <circle cx="355" cy="360" r="8" fill="#2a1a0a"/>
+    <rect x="350" y="368" width="10" height="25" fill="url(#gownGrad)" rx="1"/>
+    <rect x="348" y="355" width="14" height="3" fill="#091525"/>
+    <rect x="352" y="353" width="6" height="4" fill="#091525"/>
+  </g>
+
+  <!-- Row 3 graduates -->
+  <g>
+    <circle cx="160" cy="410" r="7" fill="#2a1a0a"/>
+    <rect x="155" y="417" width="10" height="22" fill="url(#gownGrad)" rx="1"/>
+    <rect x="153" y="406" width="14" height="3" fill="#091525"/>
+    <rect x="157" y="404" width="6" height="4" fill="#091525"/>
+
+    <circle cx="190" cy="410" r="7" fill="#3a2a1a"/>
+    <rect x="185" y="417" width="10" height="22" fill="url(#gownGrad)" rx="1"/>
+    <rect x="183" y="406" width="14" height="3" fill="#091525"/>
+    <rect x="187" y="404" width="6" height="4" fill="#091525"/>
+
+    <circle cx="220" cy="410" r="7" fill="#2a1a0a"/>
+    <rect x="215" y="417" width="10" height="22" fill="url(#gownGrad)" rx="1"/>
+    <rect x="213" y="406" width="14" height="3" fill="#091525"/>
+    <rect x="217" y="404" width="6" height="4" fill="#091525"/>
+
+    <circle cx="250" cy="410" r="7" fill="#3a2a1a"/>
+    <rect x="245" y="417" width="10" height="22" fill="url(#gownGrad)" rx="1"/>
+    <rect x="243" y="406" width="14" height="3" fill="#091525"/>
+    <rect x="247" y="404" width="6" height="4" fill="#091525"/>
+
+    <circle cx="280" cy="410" r="7" fill="#2a1a0a"/>
+    <rect x="275" y="417" width="10" height="22" fill="url(#gownGrad)" rx="1"/>
+    <rect x="273" y="406" width="14" height="3" fill="#091525"/>
+    <rect x="277" y="404" width="6" height="4" fill="#091525"/>
+
+    <circle cx="310" cy="410" r="7" fill="#3a2a1a"/>
+    <rect x="305" y="417" width="10" height="22" fill="url(#gownGrad)" rx="1"/>
+    <rect x="303" y="406" width="14" height="3" fill="#091525"/>
+    <rect x="307" y="404" width="6" height="4" fill="#091525"/>
+
+    <circle cx="340" cy="410" r="7" fill="#2a1a0a"/>
+    <rect x="335" y="417" width="10" height="22" fill="url(#gownGrad)" rx="1"/>
+    <rect x="333" y="406" width="14" height="3" fill="#091525"/>
+    <rect x="337" y="404" width="6" height="4" fill="#091525"/>
+
+    <circle cx="370" cy="410" r="7" fill="#3a2a1a"/>
+    <rect x="365" y="417" width="10" height="22" fill="url(#gownGrad)" rx="1"/>
+    <rect x="363" y="406" width="14" height="3" fill="#091525"/>
+    <rect x="367" y="404" width="6" height="4" fill="#091525"/>
+  </g>
+
+  <!-- Right side graduates -->
+  <g>
+    <circle cx="450" cy="310" r="8" fill="#2a1a0a"/>
+    <rect x="445" y="318" width="10" height="25" fill="url(#gownGrad)" rx="1"/>
+    <rect x="443" y="305" width="14" height="3" fill="#091525"/>
+    <rect x="447" y="303" width="6" height="4" fill="#091525"/>
+
+    <circle cx="480" cy="310" r="8" fill="#3a2a1a"/>
+    <rect x="475" y="318" width="10" height="25" fill="url(#gownGrad)" rx="1"/>
+    <rect x="473" y="305" width="14" height="3" fill="#091525"/>
+    <rect x="477" y="303" width="6" height="4" fill="#091525"/>
+
+    <circle cx="510" cy="310" r="8" fill="#2a1a0a"/>
+    <rect x="505" y="318" width="10" height="25" fill="url(#gownGrad)" rx="1"/>
+    <rect x="503" y="305" width="14" height="3" fill="#091525"/>
+    <rect x="507" y="303" width="6" height="4" fill="#091525"/>
+
+    <circle cx="540" cy="310" r="8" fill="#3a2a1a"/>
+    <rect x="535" y="318" width="10" height="25" fill="url(#gownGrad)" rx="1"/>
+    <rect x="533" y="305" width="14" height="3" fill="#091525"/>
+    <rect x="537" y="303" width="6" height="4" fill="#091525"/>
+
+    <circle cx="570" cy="310" r="8" fill="#2a1a0a"/>
+    <rect x="565" y="318" width="10" height="25" fill="url(#gownGrad)" rx="1"/>
+    <rect x="563" y="305" width="14" height="3" fill="#091525"/>
+    <rect x="567" y="303" width="6" height="4" fill="#091525"/>
+
+    <circle cx="600" cy="310" r="8" fill="#3a2a1a"/>
+    <rect x="595" y="318" width="10" height="25" fill="url(#gownGrad)" rx="1"/>
+    <rect x="593" y="305" width="14" height="3" fill="#091525"/>
+    <rect x="597" y="303" width="6" height="4" fill="#091525"/>
+
+    <circle cx="630" cy="310" r="8" fill="#2a1a0a"/>
+    <rect x="625" y="318" width="10" height="25" fill="url(#gownGrad)" rx="1"/>
+    <rect x="623" y="305" width="14" height="3" fill="#091525"/>
+    <rect x="627" y="303" width="6" height="4" fill="#091525"/>
+
+    <circle cx="660" cy="310" r="8" fill="#3a2a1a"/>
+    <rect x="655" y="318" width="10" height="25" fill="url(#gownGrad)" rx="1"/>
+    <rect x="653" y="305" width="14" height="3" fill="#091525"/>
+    <rect x="657" y="303" width="6" height="4" fill="#091525"/>
+  </g>
+
+  <!-- Floor -->
+  <rect x="100" y="450" width="600" height="150" fill="#0a1a30"/>
+  <path d="M100 470 L700 470 M100 490 L700 490 M100 510 L700 510 M100 530 L700 530 M100 550 L700 550 M100 570 L700 570" stroke="#C8A84E" stroke-width="0.5" opacity="0.1"/>
+
+  <!-- Degree scrolls -->
+  <rect x="210" y="470" width="8" height="20" fill="#C8A84E" rx="2" transform="rotate(-15,214,480)"/>
+  <rect x="380" y="475" width="8" height="20" fill="#C8A84E" rx="2" transform="rotate(10,384,485)"/>
+  <rect x="550" y="470" width="8" height="20" fill="#C8A84E" rx="2" transform="rotate(-5,554,480)"/>
+
+  <!-- Light effects -->
+  <g opacity="0.15">
+    <polygon points="400,0 300,210 350,210" fill="#FFD700"/>
+    <polygon points="400,0 450,210 500,210" fill="#FFD700"/>
+  </g>
+
+  <!-- Watermark -->
+  <text x="400" y="540" text-anchor="middle" font-family="Georgia,serif" font-size="30" fill="#C8A84E" opacity="0.08" font-weight="bold">GG COLLEGE</text>
+
+  <!-- Frame -->
+  <rect x="5" y="5" width="790" height="590" fill="none" stroke="#C8A84E" stroke-width="2" rx="6"/>
+  <rect x="8" y="8" width="784" height="584" fill="none" stroke="#C8A84E" stroke-width="0.5" rx="4" opacity="0.5"/>
+</svg>

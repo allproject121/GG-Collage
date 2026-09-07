@@ -1,0 +1,187 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.15"/>
+      <stop offset="40%" stop-color="#091525"/>
+      <stop offset="100%" stop-color="#0f2440"/>
+    </linearGradient>
+    <linearGradient id="building" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C8A84E"/>
+      <stop offset="30%" stop-color="#a8882e"/>
+      <stop offset="100%" stop-color="#7a6420"/>
+    </linearGradient>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff"/>
+      <stop offset="100%" stop-color="#e8e0d0"/>
+    </linearGradient>
+    <linearGradient id="carpet" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#CC0000"/>
+      <stop offset="100%" stop-color="#880000"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="10%" r="60%">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <linearGradient id="palmGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2d5a1e"/>
+      <stop offset="100%" stop-color="#1a3a10"/>
+    </linearGradient>
+    <filter id="shadow2">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="600" fill="url(#sky)"/>
+  <rect width="800" height="600" fill="url(#sun)"/>
+
+  <!-- Ground -->
+  <rect x="0" y="420" width="800" height="180" fill="#1a2a1a"/>
+  <rect x="0" y="420" width="800" height="180" fill="#0a1a0a" opacity="0.3"/>
+
+  <!-- College Building -->
+  <!-- Main body -->
+  <rect x="200" y="120" width="400" height="300" fill="url(#wall)" filter="url(#shadow2)"/>
+  <!-- Entrance arch -->
+  <path d="M320 420 L320 280 Q400 240 480 280 L480 420 Z" fill="#091525"/>
+  <!-- Red carpet -->
+  <path d="M340 420 L340 560 Q400 580 460 560 L460 420 Z" fill="url(#carpet)"/>
+  <rect x="340" y="420" width="120" height="140" fill="url(#carpet)" opacity="0.8"/>
+  <!-- Carpet border -->
+  <line x1="353" y1="420" x2="353" y2="560" stroke="#C8A84E" stroke-width="1"/>
+  <line x1="447" y1="420" x2="447" y2="560" stroke="#C8A84E" stroke-width="1"/>
+
+  <!-- Building windows -->
+  <!-- Left wing windows -->
+  <rect x="230" y="160" width="40" height="50" fill="#091525" rx="2"/>
+  <rect x="230" y="160" width="40" height="50" fill="#C8A84E" opacity="0.15" rx="2"/>
+  <line x1="250" y1="160" x2="250" y2="210" stroke="#C8A84E" stroke-width="0.5" opacity="0.5"/>
+  <line x1="230" y1="185" x2="270" y2="185" stroke="#C8A84E" stroke-width="0.5" opacity="0.5"/>
+
+  <rect x="290" y="160" width="40" height="50" fill="#091525" rx="2"/>
+  <rect x="290" y="160" width="40" height="50" fill="#C8A84E" opacity="0.15" rx="2"/>
+  <line x1="310" y1="160" x2="310" y2="210" stroke="#C8A84E" stroke-width="0.5" opacity="0.5"/>
+  <line x1="290" y1="185" x2="330" y2="185" stroke="#C8A84E" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Right wing windows -->
+  <rect x="530" y="160" width="40" height="50" fill="#091525" rx="2"/>
+  <rect x="530" y="160" width="40" height="50" fill="#C8A84E" opacity="0.15" rx="2"/>
+  <line x1="550" y1="160" x2="550" y2="210" stroke="#C8A84E" stroke-width="0.5" opacity="0.5"/>
+  <line x1="530" y1="185" x2="570" y2="185" stroke="#C8A84E" stroke-width="0.5" opacity="0.5"/>
+
+  <rect x="590" y="160" width="40" height="50" fill="#091525" rx="2"/>
+  <rect x="590" y="160" width="40" height="50" fill="#C8A84E" opacity="0.15" rx="2"/>
+  <line x1="610" y1="160" x2="610" y2="210" stroke="#C8A84E" stroke-width="0.5" opacity="0.5"/>
+  <line x1="590" y1="185" x2="630" y2="185" stroke="#C8A84E" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Upper windows row -->
+  <rect x="230" y="240" width="40" height="30" fill="#091525" rx="2"/>
+  <rect x="290" y="240" width="40" height="30" fill="#091525" rx="2"/>
+  <rect x="530" y="240" width="40" height="30" fill="#091525" rx="2"/>
+  <rect x="590" y="240" width="40" height="30" fill="#091525" rx="2"/>
+
+  <!-- Building top pediment -->
+  <polygon points="200,120 400,60 600,120" fill="#C8A84E" filter="url(#shadow2)"/>
+  <polygon points="220,120 400,70 580,120" fill="#091525"/>
+  <!-- College crest on pediment -->
+  <circle cx="400" cy="95" r="15" fill="#C8A84E"/>
+  <text x="400" y="99" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#091525" font-weight="bold">GG</text>
+
+  <!-- College name on building -->
+  <rect x="280" y="300" width="240" height="30" fill="#091525" opacity="0.9" rx="2"/>
+  <text x="400" y="320" text-anchor="middle" font-family="Georgia,serif" font-size="14" fill="#C8A84E" font-weight="bold" letter-spacing="3">G.G. COLLEGE</text>
+  <text x="400" y="340" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#C8A84E" letter-spacing="5">EST. 1965</text>
+
+  <!-- Pillars at entrance -->
+  <rect x="310" y="280" width="15" height="140" fill="#e8e0d0"/>
+  <rect x="310" y="280" width="15" height="140" fill="none" stroke="#C8A84E" stroke-width="0.5" opacity="0.3"/>
+  <rect x="475" y="280" width="15" height="140" fill="#e8e0d0"/>
+  <rect x="475" y="280" width="15" height="140" fill="none" stroke="#C8A84E" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Welcome banner -->
+  <rect x="250" y="130" width="300" height="25" fill="#C8A84E" rx="2" filter="url(#shadow2)"/>
+  <text x="400" y="148" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#091525" font-weight="bold" letter-spacing="2">WELCOME ARCHBISHOP</text>
+
+  <!-- Palm trees -->
+  <!-- Left palm -->
+  <rect x="108" y="180" width="8" height="240" fill="#3a2a10"/>
+  <path d="M112 180 Q60 130 30 150" fill="none" stroke="#2d6a1e" stroke-width="6" stroke-linecap="round"/>
+  <path d="M112 180 Q80 100 50 90" fill="none" stroke="#2d6a1e" stroke-width="5" stroke-linecap="round"/>
+  <path d="M112 180 Q130 100 160 110" fill="none" stroke="#2d6a1e" stroke-width="5" stroke-linecap="round"/>
+  <path d="M112 180 Q150 130 180 140" fill="none" stroke="#2d6a1e" stroke-width="5" stroke-linecap="round"/>
+  <path d="M112 180 Q90 140 60 160" fill="none" stroke="#3a7a2e" stroke-width="4" stroke-linecap="round"/>
+  <path d="M112 180 Q140 120 170 125" fill="none" stroke="#3a7a2e" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Right palm -->
+  <rect x="684" y="200" width="8" height="220" fill="#3a2a10"/>
+  <path d="M688 200 Q740 150 770 170" fill="none" stroke="#2d6a1e" stroke-width="6" stroke-linecap="round"/>
+  <path d="M688 200 Q720 120 750 110" fill="none" stroke="#2d6a1e" stroke-width="5" stroke-linecap="round"/>
+  <path d="M688 200 Q670 120 640 130" fill="none" stroke="#2d6a1e" stroke-width="5" stroke-linecap="round"/>
+  <path d="M688 200 Q650 150 620 160" fill="none" stroke="#2d6a1e" stroke-width="5" stroke-linecap="round"/>
+  <path d="M688 200 Q710 140 740 145" fill="none" stroke="#3a7a2e" stroke-width="4" stroke-linecap="round"/>
+  <path d="M688 200 Q660 130 630 135" fill="none" stroke="#3a7a2e" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- People gathered left side -->
+  <g>
+    <!-- Person 1 -->
+    <circle cx="150" cy="400" r="10" fill="#2a1a0a"/>
+    <rect x="144" y="410" width="12" height="25" fill="#1a3a5c" rx="2"/>
+    <!-- Person 2 -->
+    <circle cx="180" cy="405" r="10" fill="#1a2a0a"/>
+    <rect x="174" y="415" width="12" height="25" fill="#C8A84E" rx="2" opacity="0.8"/>
+    <!-- Person 3 -->
+    <circle cx="210" cy="408" r="10" fill="#2a1a0a"/>
+    <rect x="204" y="418" width="12" height="25" fill="#fff" rx="2" opacity="0.7"/>
+  </g>
+
+  <!-- People gathered right side -->
+  <g>
+    <!-- Person 4 -->
+    <circle cx="590" cy="405" r="10" fill="#1a2a0a"/>
+    <rect x="584" y="415" width="12" height="25" fill="#1a3a5c" rx="2"/>
+    <!-- Person 5 -->
+    <circle cx="620" cy="400" r="10" fill="#2a1a0a"/>
+    <rect x="614" y="410" width="12" height="25" fill="#C8A84E" rx="2" opacity="0.8"/>
+    <!-- Person 6 -->
+    <circle cx="650" cy="408" r="10" fill="#1a2a0a"/>
+    <rect x="644" y="418" width="12" height="25" fill="#fff" rx="2" opacity="0.7"/>
+  </g>
+
+  <!-- People on red carpet -->
+  <circle cx="370" cy="440" r="9" fill="#2a1a0a"/>
+  <rect x="365" y="449" width="10" height="20" fill="#1a3a5c" rx="2"/>
+  <circle cx="420" cy="445" r="9" fill="#1a2a0a"/>
+  <rect x="415" y="454" width="10" height="20" fill="#C8A84E" rx="2" opacity="0.8"/>
+
+  <!-- Garlands on entrance -->
+  <path d="M320 280 Q360 300 400 285 Q440 300 480 280" fill="none" stroke="#2d8a2e" stroke-width="3"/>
+  <circle cx="340" cy="288" r="4" fill="#FFD700"/>
+  <circle cx="360" cy="294" r="4" fill="#FF6B6B"/>
+  <circle cx="380" cy="296" r="4" fill="#FFD700"/>
+  <circle cx="400" cy="297" r="4" fill="#FF6B6B"/>
+  <circle cx="420" cy="296" r="4" fill="#FFD700"/>
+  <circle cx="440" cy="294" r="4" fill="#FF6B6B"/>
+  <circle cx="460" cy="288" r="4" fill="#FFD700"/>
+
+  <!-- Decorative flags -->
+  <rect x="200" y="120" width="2" height="30" fill="#C8A84E"/>
+  <rect x="195" y="115" width="12" height="8" fill="#C8A84E" rx="1"/>
+  <rect x="598" y="120" width="2" height="30" fill="#C8A84E"/>
+  <rect x="593" y="115" width="12" height="8" fill="#C8A84E" rx="1"/>
+
+  <!-- Warm light rays -->
+  <g opacity="0.08">
+    <polygon points="400,60 250,600 300,600" fill="#FFD700"/>
+    <polygon points="400,60 500,600 550,600" fill="#FFD700"/>
+    <polygon points="400,60 100,600 180,600" fill="#FFD700"/>
+    <polygon points="400,60 620,600 700,600" fill="#FFD700"/>
+  </g>
+
+  <!-- Bottom decorative border -->
+  <rect x="0" y="580" width="800" height="20" fill="#091525"/>
+  <text x="400" y="594" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#C8A84E" opacity="0.5" letter-spacing="4">GG COLLEGE · WELCOMES YOU</text>
+
+  <!-- Frame border -->
+  <rect x="5" y="5" width="790" height="590" fill="none" stroke="#C8A84E" stroke-width="2" rx="6"/>
+  <rect x="8" y="8" width="784" height="584" fill="none" stroke="#C8A84E" stroke-width="0.5" rx="4" opacity="0.5"/>
+</svg>

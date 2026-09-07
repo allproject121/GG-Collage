@@ -1,0 +1,247 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bgDark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0015"/>
+      <stop offset="100%" stop-color="#1a0020"/>
+    </linearGradient>
+    <linearGradient id="curtainRed" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#600000"/>
+      <stop offset="10%" stop-color="#CC0000"/>
+      <stop offset="30%" stop-color="#aa0000"/>
+      <stop offset="50%" stop-color="#DD2222"/>
+      <stop offset="70%" stop-color="#aa0000"/>
+      <stop offset="90%" stop-color="#CC0000"/>
+      <stop offset="100%" stop-color="#600000"/>
+    </linearGradient>
+    <linearGradient id="stageColor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8a3a1a"/>
+      <stop offset="100%" stop-color="#5a2a10"/>
+    </linearGradient>
+    <radialGradient id="spotlight1" cx="30%" cy="0%" r="50%">
+      <stop offset="0%" stop-color="rgba(255,215,0,0.2)"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <radialGradient id="spotlight2" cx="50%" cy="0%" r="50%">
+      <stop offset="0%" stop-color="rgba(255,100,100,0.15)"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <radialGradient id="spotlight3" cx="70%" cy="0%" r="50%">
+      <stop offset="0%" stop-color="rgba(100,200,255,0.15)"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <filter id="shadow5">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <linearGradient id="dancerDress" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF4444"/>
+      <stop offset="50%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#FF4444"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bgDark)"/>
+  <rect width="800" height="600" fill="url(#spotlight1)"/>
+  <rect width="800" height="600" fill="url(#spotlight2)"/>
+  <rect width="800" height="600" fill="url(#spotlight3)"/>
+
+  <!-- Curtains -->
+  <rect x="0" y="0" width="80" height="600" fill="url(#curtainRed)" opacity="0.85"/>
+  <rect x="720" y="0" width="80" height="600" fill="url(#curtainRed)" opacity="0.85"/>
+  <!-- Curtain top drape -->
+  <path d="M0 0 Q80 50 160 30 Q240 50 320 30 Q400 50 480 30 Q560 50 640 30 Q720 50 800 0" fill="url(#curtainRed)" opacity="0.8"/>
+  <!-- Curtain folds -->
+  <rect x="10" y="0" width="4" height="600" fill="#400000" opacity="0.2"/>
+  <rect x="25" y="0" width="4" height="600" fill="#400000" opacity="0.2"/>
+  <rect x="40" y="0" width="4" height="600" fill="#400000" opacity="0.2"/>
+  <rect x="55" y="0" width="4" height="600" fill="#400000" opacity="0.2"/>
+  <rect x="70" y="0" width="4" height="600" fill="#400000" opacity="0.2"/>
+  <rect x="730" y="0" width="4" height="600" fill="#400000" opacity="0.2"/>
+  <rect x="745" y="0" width="4" height="600" fill="#400000" opacity="0.2"/>
+  <rect x="760" y="0" width="4" height="600" fill="#400000" opacity="0.2"/>
+  <rect x="775" y="0" width="4" height="600" fill="#400000" opacity="0.2"/>
+  <rect x="790" y="0" width="4" height="600" fill="#400000" opacity="0.2"/>
+
+  <!-- Curtain tassels -->
+  <circle cx="80" cy="50" r="4" fill="#C8A84E"/>
+  <circle cx="720" cy="50" r="4" fill="#C8A84E"/>
+
+  <!-- Stage -->
+  <rect x="80" y="350" width="640" height="200" fill="url(#stageColor)" rx="2" filter="url(#shadow5)"/>
+  <rect x="80" y="350" width="640" height="3" fill="#C8A84E" opacity="0.6"/>
+
+  <!-- Stage floor pattern -->
+  <rect x="100" y="380" width="600" height="140" fill="#4a2010" opacity="0.5"/>
+  <line x1="100" y1="400" x2="700" y2="400" stroke="#C8A84E" stroke-width="0.5" opacity="0.15"/>
+  <line x1="100" y1="420" x2="700" y2="420" stroke="#C8A84E" stroke-width="0.5" opacity="0.15"/>
+  <line x1="100" y1="440" x2="700" y2="440" stroke="#C8A84E" stroke-width="0.5" opacity="0.15"/>
+  <line x1="100" y1="460" x2="700" y2="460" stroke="#C8A84E" stroke-width="0.5" opacity="0.15"/>
+  <line x1="100" y1="480" x2="700" y2="480" stroke="#C8A84E" stroke-width="0.5" opacity="0.15"/>
+  <line x1="100" y1="500" x2="700" y2="500" stroke="#C8A84E" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- Stage back wall -->
+  <rect x="120" y="80" width="560" height="270" fill="#1a0010" rx="4"/>
+  <rect x="130" y="90" width="540" height="250" fill="none" stroke="#C8A84E" stroke-width="1.5" rx="3" opacity="0.3"/>
+
+  <!-- Decorative backdrop pattern -->
+  <g opacity="0.1">
+    <circle cx="200" cy="180" r="30" fill="#C8A84E"/>
+    <circle cx="300" cy="180" r="30" fill="#C8A84E"/>
+    <circle cx="400" cy="180" r="30" fill="#C8A84E"/>
+    <circle cx="500" cy="180" r="30" fill="#C8A84E"/>
+    <circle cx="600" cy="180" r="30" fill="#C8A84E"/>
+  </g>
+
+  <!-- Event title -->
+  <text x="400" y="130" text-anchor="middle" font-family="Georgia,serif" font-size="28" fill="#C8A84E" font-weight="bold" letter-spacing="5" opacity="0.9">CULTURAL NIGHT</text>
+  <text x="400" y="155" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#C8A84E" letter-spacing="8" opacity="0.7">2025</text>
+
+  <!-- Dancers on stage -->
+  <!-- Dancer 1 (left) -->
+  <g>
+    <circle cx="250" cy="260" r="10" fill="#3a1a0a"/>
+    <ellipse cx="250" cy="285" rx="15" ry="20" fill="url(#dancerDress)" opacity="0.8"/>
+    <!-- Dress details -->
+    <path d="M235 285 L250 320 L265 285" fill="url(#dancerDress)" opacity="0.6"/>
+    <circle cx="245" cy="275" r="2" fill="#FFD700"/>
+    <circle cx="255" cy="275" r="2" fill="#FFD700"/>
+    <!-- Arms raised -->
+    <line x1="240" y1="270" x2="220" y2="240" stroke="#3a1a0a" stroke-width="3" stroke-linecap="round"/>
+    <line x1="260" y1="270" x2="280" y2="245" stroke="#3a1a0a" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Dancer 2 (center) -->
+  <g>
+    <circle cx="360" cy="255" r="11" fill="#2a1a0a"/>
+    <ellipse cx="360" cy="282" rx="16" ry="22" fill="#FF6B6B" opacity="0.8"/>
+    <ellipse cx="360" cy="282" rx="16" ry="22" fill="none" stroke="#FFD700" stroke-width="1" opacity="0.5"/>
+    <path d="M344 282 L360 320 L376 282" fill="#FF6B6B" opacity="0.6"/>
+    <!-- Dupatta/scarf -->
+    <path d="M350 265 Q340 250 330 260" fill="none" stroke="#FFD700" stroke-width="2" opacity="0.7"/>
+    <path d="M370 265 Q380 250 390 260" fill="none" stroke="#FFD700" stroke-width="2" opacity="0.7"/>
+    <!-- Arms -->
+    <line x1="350" y1="268" x2="330" y2="240" stroke="#2a1a0a" stroke-width="3" stroke-linecap="round"/>
+    <line x1="370" y1="268" x2="390" y2="240" stroke="#2a1a0a" stroke-width="3" stroke-linecap="round"/>
+    <!-- Jewelry -->
+    <circle cx="360" cy="265" r="4" fill="#C8A84E" opacity="0.6"/>
+  </g>
+
+  <!-- Dancer 3 (right) -->
+  <g>
+    <circle cx="470" cy="258" r="10" fill="#3a1a0a"/>
+    <ellipse cx="470" cy="283" rx="15" ry="20" fill="#44AAFF" opacity="0.8"/>
+    <path d="M455 283 L470 318 L485 283" fill="#44AAFF" opacity="0.6"/>
+    <line x1="460" y1="268" x2="440" y2="242" stroke="#3a1a0a" stroke-width="3" stroke-linecap="round"/>
+    <line x1="480" y1="268" x2="500" y2="242" stroke="#3a1a0a" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="470" cy="268" r="3" fill="#C8A84E" opacity="0.6"/>
+  </g>
+
+  <!-- Dancer 4 (far left) -->
+  <g>
+    <circle cx="160" cy="265" r="9" fill="#2a1a0a"/>
+    <ellipse cx="160" cy="288" rx="13" ry="18" fill="#FFB347" opacity="0.8"/>
+    <path d="M147 288 L160 318 L173 288" fill="#FFB347" opacity="0.6"/>
+    <line x1="152" y1="275" x2="135" y2="252" stroke="#2a1a0a" stroke-width="3" stroke-linecap="round"/>
+    <line x1="168" y1="275" x2="185" y2="252" stroke="#2a1a0a" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Dancer 5 (far right) -->
+  <g>
+    <circle cx="550" cy="262" r="9" fill="#3a1a0a"/>
+    <ellipse cx="550" cy="286" rx="13" ry="18" fill="#AA44FF" opacity="0.8"/>
+    <path d="M537 286 L550 318 L563 286" fill="#AA44FF" opacity="0.6"/>
+    <line x1="542" y1="272" x2="525" y2="250" stroke="#3a1a0a" stroke-width="3" stroke-linecap="round"/>
+    <line x1="558" y1="272" x2="575" y2="250" stroke="#3a1a0a" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Singer with mic at left -->
+  <g>
+    <circle cx="130" cy="245" r="9" fill="#2a1a0a"/>
+    <rect x="125" y="254" width="10" height="25" fill="#fff" rx="2" opacity="0.8"/>
+    <line x1="130" y1="245" x2="145" y2="235" stroke="#888" stroke-width="1.5"/>
+    <circle cx="147" cy="234" r="3" fill="#555"/>
+  </g>
+
+  <!-- Musical instruments -->
+  <!-- Dholak (drum) left -->
+  <ellipse cx="200" cy="320" rx="15" ry="8" fill="#8a6a3a" stroke="#C8A84E" stroke-width="0.5"/>
+  <rect x="195" y="312" width="10" height="8" fill="#6a4a2a"/>
+
+  <!-- Tabla right -->
+  <circle cx="500" cy="320" r="8" fill="#8a6a3a"/>
+  <circle cx="518" cy="320" r="6" fill="#8a6a3a"/>
+  <circle cx="500" cy="320" r="6" fill="none" stroke="#C8A84E" stroke-width="0.5"/>
+  <circle cx="518" cy="320" r="4" fill="none" stroke="#C8A84E" stroke-width="0.5"/>
+
+  <!-- Light beams from above -->
+  <g opacity="0.08">
+    <polygon points="200,0 120,350 180,350" fill="#FFD700"/>
+    <polygon points="300,0 260,350 320,350" fill="#FF69B4"/>
+    <polygon points="400,0 360,350 440,350" fill="#44AAFF"/>
+    <polygon points="500,0 480,350 540,350" fill="#FFD700"/>
+    <polygon points="600,0 580,350 660,350" fill="#FF69B4"/>
+  </g>
+
+  <!-- Stage lights -->
+  <circle cx="200" cy="15" r="8" fill="#FFD700" opacity="0.6" filter="url(#shadow5)"/>
+  <circle cx="300" cy="12" r="8" fill="#FF69B4" opacity="0.5" filter="url(#shadow5)"/>
+  <circle cx="400" cy="10" r="10" fill="#44AAFF" opacity="0.5" filter="url(#shadow5)"/>
+  <circle cx="500" cy="12" r="8" fill="#FFD700" opacity="0.5" filter="url(#shadow5)"/>
+  <circle cx="600" cy="15" r="8" fill="#FF69B4" opacity="0.5" filter="url(#shadow5)"/>
+  <!-- Light housings -->
+  <rect x="193" y="5" width="14" height="12" fill="#333" rx="2"/>
+  <rect x="293" y="2" width="14" height="12" fill="#333" rx="2"/>
+  <rect x="393" y="0" width="14" height="14" fill="#333" rx="2"/>
+  <rect x="493" y="2" width="14" height="12" fill="#333" rx="2"/>
+  <rect x="593" y="5" width="14" height="12" fill="#333" rx="2"/>
+
+  <!-- Audience -->
+  <g opacity="0.7">
+    <!-- First row audience -->
+    <circle cx="120" cy="395" r="6" fill="#2a1a0a"/>
+    <rect x="116" y="401" width="8" height="15" fill="#1a3a5c" rx="1"/>
+    <circle cx="145" cy="395" r="6" fill="#3a2a1a"/>
+    <rect x="141" y="401" width="8" height="15" fill="#C8A84E" rx="1" opacity="0.7"/>
+    <circle cx="170" cy="395" r="6" fill="#2a1a0a"/>
+    <rect x="166" y="401" width="8" height="15" fill="#fff" rx="1" opacity="0.6"/>
+    <circle cx="195" cy="395" r="6" fill="#3a2a1a"/>
+    <rect x="191" y="401" width="8" height="15" fill="#1a3a5c" rx="1"/>
+
+    <circle cx="620" cy="395" r="6" fill="#2a1a0a"/>
+    <rect x="616" y="401" width="8" height="15" fill="#1a3a5c" rx="1"/>
+    <circle cx="645" cy="395" r="6" fill="#3a2a1a"/>
+    <rect x="641" y="401" width="8" height="15" fill="#C8A84E" rx="1" opacity="0.7"/>
+    <circle cx="670" cy="395" r="6" fill="#2a1a0a"/>
+    <rect x="666" y="401" width="8" height="15" fill="#fff" rx="1" opacity="0.6"/>
+    <circle cx="695" cy="395" r="6" fill="#3a2a1a"/>
+    <rect x="691" y="401" width="8" height="15" fill="#1a3a5c" rx="1"/>
+
+    <!-- More audience -->
+    <circle cx="290" cy="425" r="7" fill="#2a1a0a"/>
+    <rect x="286" y="432" width="8" height="15" fill="#1a3a5c" rx="1"/>
+    <circle cx="320" cy="425" r="7" fill="#3a2a1a"/>
+    <rect x="316" y="432" width="8" height="15" fill="#C8A84E" rx="1" opacity="0.7"/>
+    <circle cx="350" cy="425" r="7" fill="#2a1a0a"/>
+    <rect x="346" y="432" width="8" height="15" fill="#fff" rx="1" opacity="0.6"/>
+    <circle cx="380" cy="425" r="7" fill="#3a2a1a"/>
+    <rect x="376" y="432" width="8" height="15" fill="#1a3a5c" rx="1"/>
+
+    <circle cx="430" cy="425" r="7" fill="#2a1a0a"/>
+    <rect x="426" y="432" width="8" height="15" fill="#1a3a5c" rx="1"/>
+    <circle cx="460" cy="425" r="7" fill="#3a2a1a"/>
+    <rect x="456" y="432" width="8" height="15" fill="#C8A84E" rx="1" opacity="0.7"/>
+    <circle cx="490" cy="425" r="7" fill="#2a1a0a"/>
+    <rect x="486" y="432" width="8" height="15" fill="#fff" rx="1" opacity="0.6"/>
+    <circle cx="520" cy="425" r="7" fill="#3a2a1a"/>
+    <rect x="516" y="432" width="8" height="15" fill="#1a3a5c" rx="1"/>
+  </g>
+
+  <!-- Stage front decoration -->
+  <rect x="80" y="545" width="640" height="5" fill="#C8A84E" opacity="0.4"/>
+
+  <!-- Watermark -->
+  <text x="400" y="520" text-anchor="middle" font-family="Georgia,serif" font-size="28" fill="#C8A84E" opacity="0.06" font-weight="bold">GG COLLEGE</text>
+
+  <!-- Frame -->
+  <rect x="5" y="5" width="790" height="590" fill="none" stroke="#C8A84E" stroke-width="2" rx="6"/>
+  <rect x="8" y="8" width="784" height="584" fill="none" stroke="#C8A84E" stroke-width="0.5" rx="4" opacity="0.5"/>
+</svg>

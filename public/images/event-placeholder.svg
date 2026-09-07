@@ -1,0 +1,196 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bgFarewell" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a0020"/>
+      <stop offset="50%" stop-color="#2a0030"/>
+      <stop offset="100%" stop-color="#0a0015"/>
+    </linearGradient>
+    <linearGradient id="stageWarm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a2a10"/>
+      <stop offset="100%" stop-color="#3a1a08"/>
+    </linearGradient>
+    <linearGradient id="fairyLight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#FFA500"/>
+    </linearGradient>
+    <radialGradient id="warmGlow" cx="50%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="rgba(255,215,0,0.1)"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <filter id="shadow7">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <linearGradient id="balloonGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF6B6B"/>
+      <stop offset="100%" stop-color="#CC3333"/>
+    </linearGradient>
+    <linearGradient id="balloonGrad2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#C8A84E"/>
+    </linearGradient>
+    <linearGradient id="balloonGrad3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#44AAFF"/>
+      <stop offset="100%" stop-color="#2266CC"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bgFarewell)"/>
+  <rect width="800" height="600" fill="url(#warmGlow)"/>
+
+  <!-- Back wall / backdrop -->
+  <rect x="50" y="30" width="700" height="330" fill="#2a0038" rx="8" filter="url(#shadow7)"/>
+  <rect x="60" y="40" width="680" height="310" fill="none" stroke="#C8A84E" stroke-width="2" rx="6" opacity="0.4"/>
+
+  <!-- Photo booth backdrop (center) -->
+  <rect x="250" y="80" width="300" height="200" fill="#1a0028" rx="4" filter="url(#shadow7)"/>
+  <rect x="258" y="88" width="284" height="184" fill="none" stroke="#C8A84E" stroke-width="1.5" rx="3" opacity="0.5"/>
+  <!-- Photo booth decorations -->
+  <circle cx="300" cy="120" r="20" fill="#C8A84E" opacity="0.1"/>
+  <circle cx="400" cy="140" r="25" fill="#C8A84E" opacity="0.08"/>
+  <circle cx="500" cy="120" r="20" fill="#C8A84E" opacity="0.1"/>
+  <!-- Photo frame corners -->
+  <path d="M270 100 L270 120 L290 120" fill="none" stroke="#C8A84E" stroke-width="2" opacity="0.6"/>
+  <path d="M530 100 L530 120 L510 120" fill="none" stroke="#C8A84E" stroke-width="2" opacity="0.6"/>
+  <path d="M270 250 L270 230 L290 230" fill="none" stroke="#C8A84E" stroke-width="2" opacity="0.6"/>
+  <path d="M530 250 L530 230 L510 230" fill="none" stroke="#C8A84E" stroke-width="2" opacity="0.6"/>
+  <text x="400" y="180" text-anchor="middle" font-family="Georgia,serif" font-size="16" fill="#C8A84E" opacity="0.6" letter-spacing="2">PHOTO BOOTH</text>
+  <text x="400" y="200" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#C8A84E" opacity="0.4">Capture the Memories</text>
+
+  <!-- Farewell Banner -->
+  <rect x="180" y="40" width="440" height="40" fill="#C8A84E" rx="4" filter="url(#shadow7)"/>
+  <text x="400" y="67" text-anchor="middle" font-family="Georgia,serif" font-size="22" fill="#091525" font-weight="bold" letter-spacing="5">FAREWELL 2025</text>
+
+  <!-- Stage -->
+  <rect x="50" y="360" width="700" height="60" fill="url(#stageWarm)" rx="2" filter="url(#shadow7)"/>
+  <rect x="50" y="360" width="700" height="3" fill="#C8A84E" opacity="0.5"/>
+
+  <!-- Balloons -->
+  <!-- Balloon 1 -->
+  <ellipse cx="120" cy="120" rx="18" ry="22" fill="url(#balloonGrad)" filter="url(#shadow7)"/>
+  <path d="M120 142 L118 155" stroke="#CC3333" stroke-width="1"/>
+  <polygon points="118,144 122,144 120,148" fill="#CC3333"/>
+
+  <!-- Balloon 2 -->
+  <ellipse cx="160" cy="90" rx="16" ry="20" fill="url(#balloonGrad2)" filter="url(#shadow7)"/>
+  <path d="M160 110 L158 125" stroke="#C8A84E" stroke-width="1"/>
+  <polygon points="158,112 162,112 160,116" fill="#C8A84E"/>
+
+  <!-- Balloon 3 -->
+  <ellipse cx="680" cy="110" rx="18" ry="22" fill="url(#balloonGrad3)" filter="url(#shadow7)"/>
+  <path d="M680 132 L678 145" stroke="#2266CC" stroke-width="1"/>
+  <polygon points="678,134 682,134 680,138" fill="#2266CC"/>
+
+  <!-- Balloon 4 -->
+  <ellipse cx="720" cy="80" rx="16" ry="20" fill="url(#balloonGrad)" filter="url(#shadow7)"/>
+  <path d="M720 100 L718 115" stroke="#CC3333" stroke-width="1"/>
+  <polygon points="718,102 722,102 720,106" fill="#CC3333"/>
+
+  <!-- Balloon 5 -->
+  <ellipse cx="90" cy="80" rx="16" ry="20" fill="url(#balloonGrad3)" filter="url(#shadow7)"/>
+  <path d="M90 100 L88 115" stroke="#2266CC" stroke-width="1"/>
+  <polygon points="88,102 92,102 90,106" fill="#2266CC"/>
+
+  <!-- Balloon 6 -->
+  <ellipse cx="350" cy="70" rx="14" ry="18" fill="url(#balloonGrad2)" filter="url(#shadow7)"/>
+  <path d="M350 88 L348 100" stroke="#C8A84E" stroke-width="1"/>
+
+  <!-- Balloon 7 -->
+  <ellipse cx="460" cy="65" rx="14" ry="18" fill="url(#balloonGrad)" filter="url(#shadow7)"/>
+  <path d="M460 83 L458 95" stroke="#CC3333" stroke-width="1"/>
+
+  <!-- Fairy lights (across top) -->
+  <path d="M50 30 Q200 15 400 30 Q600 15 750 30" fill="none" stroke="#C8A84E" stroke-width="1.5" opacity="0.6"/>
+  <!-- Fairy light bulbs -->
+  <circle cx="100" cy="28" r="3" fill="#FFD700" opacity="0.8"/>
+  <circle cx="150" cy="22" r="3" fill="#FF69B4" opacity="0.8"/>
+  <circle cx="200" cy="18" r="3" fill="#44AAFF" opacity="0.8"/>
+  <circle cx="260" cy="20" r="3" fill="#FFD700" opacity="0.8"/>
+  <circle cx="330" cy="24" r="3" fill="#FF69B4" opacity="0.8"/>
+  <circle cx="400" cy="28" r="3" fill="#44AAFF" opacity="0.8"/>
+  <circle cx="470" cy="24" r="3" fill="#FFD700" opacity="0.8"/>
+  <circle cx="540" cy="20" r="3" fill="#FF69B4" opacity="0.8"/>
+  <circle cx="600" cy="18" r="3" fill="#44AAFF" opacity="0.8"/>
+  <circle cx="650" cy="22" r="3" fill="#FFD700" opacity="0.8"/>
+  <circle cx="700" cy="28" r="3" fill="#FF69B4" opacity="0.8"/>
+
+  <!-- Fairy lights spread 2 -->
+  <path d="M50 360 Q150 340 300 360" fill="none" stroke="#C8A84E" stroke-width="1" opacity="0.4"/>
+  <circle cx="100" cy="352" r="2.5" fill="#FFD700" opacity="0.7"/>
+  <circle cx="180" cy="345" r="2.5" fill="#FF69B4" opacity="0.7"/>
+  <circle cx="250" cy="352" r="2.5" fill="#44AAFF" opacity="0.7"/>
+
+  <path d="M500 360 Q650 340 750 360" fill="none" stroke="#C8A84E" stroke-width="1" opacity="0.4"/>
+  <circle cx="550" cy="352" r="2.5" fill="#FFD700" opacity="0.7"/>
+  <circle cx="630" cy="345" r="2.5" fill="#FF69B4" opacity="0.7"/>
+  <circle cx="700" cy="352" r="2.5" fill="#44AAFF" opacity="0.7"/>
+
+  <!-- Cake table (right side) -->
+  <rect x="580" y="300" width="100" height="60" fill="#6a4a2a" rx="3" filter="url(#shadow7)"/>
+  <rect x="580" y="300" width="100" height="5" fill="#C8A84E" opacity="0.5"/>
+  <!-- Cake -->
+  <rect x="610" y="280" width="40" height="20" fill="#FFF5EE" rx="2"/>
+  <rect x="615" y="275" width="30" height="5" fill="#FF69B4" rx="1"/>
+  <rect x="618" y="295" width="24" height="5" fill="#FFD700" rx="1"/>
+  <!-- Candle -->
+  <rect x="628" y="268" width="3" height="8" fill="#FF69B4"/>
+  <circle cx="629" cy="266" r="2" fill="#FFD700"/>
+  <path d="M629 266 L630 262" stroke="#FFD700" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Students mingling -->
+  <!-- Group left -->
+  <circle cx="180" cy="290" r="9" fill="#2a1a0a"/>
+  <rect x="175" y="299" width="10" height="25" fill="#1a3a5c" rx="2"/>
+  <circle cx="205" cy="285" r="9" fill="#3a2a1a"/>
+  <rect x="200" y="294" width="10" height="25" fill="#C8A84E" rx="2" opacity="0.8"/>
+  <circle cx="230" cy="290" r="9" fill="#2a1a0a"/>
+  <rect x="225" y="299" width="10" height="25" fill="#fff" rx="2" opacity="0.7"/>
+
+  <!-- Group center -->
+  <circle cx="380" cy="295" r="9" fill="#2a1a0a"/>
+  <rect x="375" y="304" width="10" height="25" fill="#1a3a5c" rx="2"/>
+  <circle cx="410" cy="290" r="9" fill="#3a2a1a"/>
+  <rect x="405" y="299" width="10" height="25" fill="#C8A84E" rx="2" opacity="0.8"/>
+
+  <!-- Group right -->
+  <circle cx="500" cy="292" r="9" fill="#2a1a0a"/>
+  <rect x="495" y="301" width="10" height="25" fill="#fff" rx="2" opacity="0.7"/>
+  <circle cx="530" cy="288" r="9" fill="#3a2a1a"/>
+  <rect x="525" y="297" width="10" height="25" fill="#1a3a5c" rx="2"/>
+
+  <!-- People on stage / near stage -->
+  <circle cx="100" cy="380" r="8" fill="#2a1a0a"/>
+  <rect x="95" y="388" width="10" height="22" fill="#C8A84E" rx="2" opacity="0.8"/>
+  <circle cx="700" cy="380" r="8" fill="#3a2a1a"/>
+  <rect x="695" y="388" width="10" height="22" fill="#1a3a5c" rx="2"/>
+
+  <!-- Confetti / streamers -->
+  <rect x="200" y="120" width="6" height="2" fill="#FF6B6B" opacity="0.7" transform="rotate(30,203,121)"/>
+  <rect x="320" y="90" width="6" height="2" fill="#FFD700" opacity="0.7" transform="rotate(-20,323,91)"/>
+  <rect x="500" y="100" width="6" height="2" fill="#44AAFF" opacity="0.7" transform="rotate(45,503,101)"/>
+  <rect x="150" y="150" width="6" height="2" fill="#FF69B4" opacity="0.7" transform="rotate(-35,153,151)"/>
+  <rect x="600" y="130" width="6" height="2" fill="#FFD700" opacity="0.7" transform="rotate(15,603,131)"/>
+  <rect x="450" y="80" width="6" height="2" fill="#FF6B6B" opacity="0.7" transform="rotate(60,453,81)"/>
+  <rect x="350" y="110" width="6" height="2" fill="#44AAFF" opacity="0.7" transform="rotate(-45,353,111)"/>
+  <rect x="550" y="95" width="6" height="2" fill="#FF69B4" opacity="0.7" transform="rotate(25,553,96)"/>
+
+  <!-- Streamer curls -->
+  <path d="M280 130 Q290 140 285 150 Q280 160 290 170" fill="none" stroke="#FFD700" stroke-width="1.5" opacity="0.4"/>
+  <path d="M520 140 Q530 150 525 160 Q520 170 530 180" fill="none" stroke="#FF69B4" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Floor -->
+  <rect x="0" y="420" width="800" height="180" fill="#0a0015"/>
+  <rect x="0" y="420" width="800" height="180" fill="#C8A84E" opacity="0.03"/>
+
+  <!-- Floor pattern -->
+  <path d="M0 440 L800 440 M0 460 L800 460 M0 480 L800 480 M0 500 L800 500 M0 520 L800 520 M0 540 L800 540 M0 560 L800 560" stroke="#C8A84E" stroke-width="0.5" opacity="0.05"/>
+
+  <!-- Watermark -->
+  <text x="400" y="530" text-anchor="middle" font-family="Georgia,serif" font-size="28" fill="#C8A84E" opacity="0.06" font-weight="bold">GG COLLEGE</text>
+
+  <!-- Bottom text -->
+  <text x="400" y="570" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#C8A84E" opacity="0.3" letter-spacing="3">Goodbye &amp; Good Luck</text>
+
+  <!-- Frame -->
+  <rect x="5" y="5" width="790" height="590" fill="none" stroke="#C8A84E" stroke-width="2" rx="6"/>
+  <rect x="8" y="8" width="784" height="584" fill="none" stroke="#C8A84E" stroke-width="0.5" rx="4" opacity="0.5"/>
+</svg>

@@ -1,0 +1,7 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#1a3a5c"/>
+  <text x="400" y="220" text-anchor="middle" font-family="system-ui,sans-serif" font-size="28" font-weight="700" fill="#c8a84e">Cultural Activity Placeholder</text>
+  <text x="400" y="270" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="rgba(255,255,255,0.7)">GG College</text>
+  <circle cx="400" cy="140" r="36" fill="none" stroke="#c8a84e" stroke-width="3"/>
+  <polygon points="392,126 392,154 414,140" fill="#c8a84e"/>
+</svg>
