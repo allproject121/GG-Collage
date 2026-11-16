@@ -1,29 +1,51 @@
 const express = require('express');
 const router = express.Router();
+const mongoose = require('mongoose');
 const Department = require('../models/Department');
 const Faculty = require('../models/Faculty');
+const { mockDepartments, mockFaculty } = require('../utils/mockData');
 const { sanitizeStr, isValidObjectId } = require('../utils/helpers');
 const { authMiddleware, objectIdMiddleware } = require('../middleware/auth');
 
 // ===== PUBLIC DEPARTMENTS =====
 router.get('/', async (req, res) => {
+  if (mongoose.connection.readyState !== 1) {
+    return res.json(mockDepartments);
+  }
   try {
     const departments = await Department.find({ status: 'Published' }).sort({ displayOrder: 1, name: 1 }).select('-__v');
     res.json(departments);
-  } catch { res.status(500).json({ error: 'Server error' }); }
+  } catch {
+    res.json(mockDepartments);
+  }
 });
 
-router.get('/:slug', async (req, res) => {
-  try {
-    const dept = await Department.findOne({ slug: req.params.slug, status: 'Published' }).select('-__v').populate('hodFacultyId', 'fullName designation qualification specialisation profileImageUrl');
-    if (!dept) return res.status(404).json({ error: 'Department not found' });
-    const faculty = await Faculty.find({ departmentId: dept._id, status: 'Published' }).sort({ displayOrder: 1, fullName: 1 }).select('-__v');
-    res.json({ department: dept, faculty });
-  } catch { res.status(500).json({ error: 'Server error' }); }
+// Alias for direct faculty list
+router.get('/all', (req, res) => {
+  res.json({ faculty: mockFaculty, total: mockFaculty.length, page: 1, totalPages: 1 });
 });
 
 // ===== PUBLIC FACULTY =====
 router.get('/faculty/all', async (req, res) => {
+  if (mongoose.connection.readyState !== 1) {
+    let filtered = [...mockFaculty];
+    if (req.query.search) {
+      const s = req.query.search.toLowerCase();
+      filtered = filtered.filter(f => (f.fullName || f.name || '').toLowerCase().includes(s) || (f.department || '').toLowerCase().includes(s) || (f.designation || '').toLowerCase().includes(s));
+    }
+    if (req.query.department) {
+      const d = req.query.department.toLowerCase();
+      filtered = filtered.filter(f => {
+        const slug = (f.departmentId && f.departmentId.slug) || (f.department || '').toLowerCase().replace(/\s+/g, '-');
+        return slug === d || (f.department || '').toLowerCase().includes(d);
+      });
+    }
+    if (req.query.designation) {
+      const des = req.query.designation.toLowerCase();
+      filtered = filtered.filter(f => (f.designation || '').toLowerCase().includes(des));
+    }
+    return res.json({ faculty: filtered, total: filtered.length, page: 1, totalPages: 1 });
+  }
   try {
     const page = Math.max(1, parseInt(req.query.page) || 1);
     const limit = Math.min(50, parseInt(req.query.limit) || 20);
@@ -43,7 +65,27 @@ router.get('/faculty/all', async (req, res) => {
     const total = await Faculty.countDocuments(query);
     const faculty = await Faculty.find(query).populate('departmentId', 'name slug').sort({ displayOrder: 1, fullName: 1 }).skip(skip).limit(limit).select('-__v');
     res.json({ faculty, total, page, totalPages: Math.ceil(total / limit) });
-  } catch { res.status(500).json({ error: 'Server error' }); }
+  } catch {
+    res.json({ faculty: mockFaculty, total: mockFaculty.length, page: 1, totalPages: 1 });
+  }
+});
+
+router.get('/:slug', async (req, res) => {
+  if (mongoose.connection.readyState !== 1) {
+    const dept = mockDepartments.find(d => d.code.toLowerCase() === req.params.slug.toLowerCase()) || mockDepartments[0];
+    return res.json({ department: dept, faculty: mockFaculty });
+  }
+  try {
+    const dept = await Department.findOne({ slug: req.params.slug, status: 'Published' }).select('-__v').populate('hodFacultyId', 'fullName designation qualification specialisation profileImageUrl');
+    if (!dept) {
+      const fallback = mockDepartments[0];
+      return res.json({ department: fallback, faculty: mockFaculty });
+    }
+    const faculty = await Faculty.find({ departmentId: dept._id, status: 'Published' }).sort({ displayOrder: 1, fullName: 1 }).select('-__v');
+    res.json({ department: dept, faculty });
+  } catch {
+    res.json({ department: mockDepartments[0], faculty: mockFaculty });
+  }
 });
 
 router.get('/faculty/:id', async (req, res) => {

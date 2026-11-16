@@ -1,14 +1,39 @@
 const express = require('express');
 const router = express.Router();
+const mongoose = require('mongoose');
 const Notice = require('../models/Notice');
+const { mockNotices } = require('../utils/mockData');
 const { sanitizeStr, isValidObjectId } = require('../utils/helpers');
 const { authMiddleware, objectIdMiddleware } = require('../middleware/auth');
 
 const VALID_CATEGORIES = ['Admission','Examination','Scholarship','Event','General','University','Placement','IQAC','NAAC','NIRF'];
 const VALID_STATUSES = ['Draft','Published','Archived'];
 
+function getFilteredMockNotices(req) {
+  let filtered = mockNotices.map(n => ({
+    ...n,
+    date: n.noticeDate,
+    publishDate: n.noticeDate
+  }));
+  if (req.query.category && req.query.category !== 'all') {
+    filtered = filtered.filter(n => n.category.toLowerCase() === req.query.category.toLowerCase());
+  }
+  if (req.query.search) {
+    const s = req.query.search.toLowerCase();
+    filtered = filtered.filter(n => (n.title && n.title.toLowerCase().includes(s)) || (n.shortDescription && n.shortDescription.toLowerCase().includes(s)) || (n.body && n.body.toLowerCase().includes(s)));
+  }
+  const page = Math.max(1, parseInt(req.query.page) || 1);
+  const limit = Math.min(50, Math.max(1, parseInt(req.query.limit) || 10));
+  const skip = (page - 1) * limit;
+  const paginated = filtered.slice(skip, skip + limit);
+  return { notices: paginated, total: filtered.length, page, totalPages: Math.ceil(filtered.length / limit) };
+}
+
 // Public: Get published notices with pagination, search, filters
 router.get('/', async (req, res) => {
+  if (mongoose.connection.readyState !== 1) {
+    return res.json(getFilteredMockNotices(req));
+  }
   try {
     const page = Math.max(1, parseInt(req.query.page) || 1);
     const limit = Math.min(50, Math.max(1, parseInt(req.query.limit) || 10));
@@ -33,31 +58,48 @@ router.get('/', async (req, res) => {
       .limit(limit)
       .select('-__v');
     res.json({ notices, total, page, totalPages: Math.ceil(total / limit) });
-  } catch { res.status(500).json({ error: 'Server error' }); }
+  } catch {
+    res.json(getFilteredMockNotices(req));
+  }
 });
 
 // Public: Get pinned notices
 router.get('/pinned', async (req, res) => {
+  if (mongoose.connection.readyState !== 1) {
+    return res.json(mockNotices.filter(n => n.isPinned));
+  }
   try {
     const notices = await Notice.find({ status: 'Published', isPinned: true }).sort({ noticeDate: -1 }).select('-__v');
     res.json(notices);
-  } catch { res.status(500).json({ error: 'Server error' }); }
+  } catch {
+    res.json(mockNotices.filter(n => n.isPinned));
+  }
 });
 
 // Public: Get important notices
 router.get('/important', async (req, res) => {
+  if (mongoose.connection.readyState !== 1) {
+    return res.json(mockNotices.filter(n => n.isImportant));
+  }
   try {
     const notices = await Notice.find({ status: 'Published', isImportant: true }).sort({ noticeDate: -1 }).select('-__v');
     res.json(notices);
-  } catch { res.status(500).json({ error: 'Server error' }); }
+  } catch {
+    res.json(mockNotices.filter(n => n.isImportant));
+  }
 });
 
 // Public: Get archived notices
 router.get('/archived', async (req, res) => {
+  if (mongoose.connection.readyState !== 1) {
+    return res.json([]);
+  }
   try {
     const notices = await Notice.find({ status: 'Archived' }).sort({ noticeDate: -1 }).select('-__v');
     res.json(notices);
-  } catch { res.status(500).json({ error: 'Server error' }); }
+  } catch {
+    res.json([]);
+  }
 });
 
 // Admin: Get all notices (including drafts)

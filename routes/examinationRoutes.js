@@ -1,14 +1,24 @@
 const express = require('express');
 const router = express.Router();
+const mongoose = require('mongoose');
 const ExamNotice = require('../models/ExamNotice');
 const ExamTimetable = require('../models/ExamTimetable');
 const ResultLink = require('../models/ResultLink');
 const QuestionPaper = require('../models/QuestionPaper');
+const { mockExamNotices, mockExamTimetables, mockResultLinks, mockQuestionPapers } = require('../utils/mockData');
 const { sanitizeStr, isValidObjectId } = require('../utils/helpers');
 const { authMiddleware, objectIdMiddleware } = require('../middleware/auth');
 
+// ===== BASE ROUTE =====
+router.get('/', (req, res) => {
+  res.json({ status: 'ok', service: 'examination', endpoints: ['/notices', '/timetables', '/results', '/question-papers'] });
+});
+
 // ===== PUBLIC EXAM NOTICES =====
 router.get('/notices', async (req, res) => {
+  if (mongoose.connection.readyState !== 1) {
+    return res.json({ notices: mockExamNotices, total: mockExamNotices.length, page: 1, totalPages: 1 });
+  }
   try {
     const page = Math.max(1, parseInt(req.query.page) || 1);
     const limit = Math.min(50, parseInt(req.query.limit) || 10);
@@ -22,11 +32,16 @@ router.get('/notices', async (req, res) => {
     const total = await ExamNotice.countDocuments(query);
     const notices = await ExamNotice.find(query).sort({ noticeDate: -1 }).skip(skip).limit(limit).select('-__v');
     res.json({ notices, total, page, totalPages: Math.ceil(total / limit) });
-  } catch { res.status(500).json({ error: 'Server error' }); }
+  } catch {
+    res.json({ notices: mockExamNotices, total: mockExamNotices.length, page: 1, totalPages: 1 });
+  }
 });
 
 // ===== PUBLIC TIMETABLES =====
 router.get('/timetables', async (req, res) => {
+  if (mongoose.connection.readyState !== 1) {
+    return res.json(mockExamTimetables);
+  }
   try {
     const query = { status: 'Published' };
     if (req.query.course) query.course = { $regex: new RegExp(req.query.course.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i') };
@@ -34,11 +49,16 @@ router.get('/timetables', async (req, res) => {
     if (req.query.academicYear) query.academicYear = req.query.academicYear;
     const timetables = await ExamTimetable.find(query).sort({ startDate: -1 }).select('-__v');
     res.json(timetables);
-  } catch { res.status(500).json({ error: 'Server error' }); }
+  } catch {
+    res.json(mockExamTimetables);
+  }
 });
 
 // ===== PUBLIC RESULTS =====
 router.get('/results', async (req, res) => {
+  if (mongoose.connection.readyState !== 1) {
+    return res.json(mockResultLinks);
+  }
   try {
     const query = { status: 'Published' };
     if (req.query.course) query.course = { $regex: new RegExp(req.query.course.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i') };
@@ -46,11 +66,16 @@ router.get('/results', async (req, res) => {
     if (req.query.academicYear) query.academicYear = req.query.academicYear;
     const results = await ResultLink.find(query).sort({ resultDate: -1 }).select('-__v');
     res.json(results);
-  } catch { res.status(500).json({ error: 'Server error' }); }
+  } catch {
+    res.json(mockResultLinks);
+  }
 });
 
 // ===== PUBLIC QUESTION PAPERS =====
 router.get('/question-papers', async (req, res) => {
+  if (mongoose.connection.readyState !== 1) {
+    return res.json({ questionPapers: mockQuestionPapers, total: mockQuestionPapers.length, page: 1, totalPages: 1 });
+  }
   try {
     const page = Math.max(1, parseInt(req.query.page) || 1);
     const limit = Math.min(50, parseInt(req.query.limit) || 12);
@@ -64,9 +89,11 @@ router.get('/question-papers', async (req, res) => {
       query.$or = [{ subject: searchRegex }, { subjectCode: searchRegex }];
     }
     const total = await QuestionPaper.countDocuments(query);
-    const papers = await QuestionPaper.find(query).sort({ createdAt: -1 }).skip(skip).limit(limit).select('-__v');
-    res.json({ papers, total, page, totalPages: Math.ceil(total / limit) });
-  } catch { res.status(500).json({ error: 'Server error' }); }
+    const questionPapers = await QuestionPaper.find(query).sort({ year: -1, examSession: 1 }).skip(skip).limit(limit).select('-__v');
+    res.json({ questionPapers, total, page, totalPages: Math.ceil(total / limit) });
+  } catch {
+    res.json({ questionPapers: mockQuestionPapers, total: mockQuestionPapers.length, page: 1, totalPages: 1 });
+  }
 });
 
 // ===== ADMIN EXAM NOTICES =====

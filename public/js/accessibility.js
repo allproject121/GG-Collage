@@ -6,11 +6,12 @@
   'use strict';
 
   var STORAGE_PREFIX = 'gg_access_';
+  var body = document.body || document.documentElement;
 
   function initAccessibility() {
+    body = document.body || document.documentElement;
     var accessBtn = document.getElementById('accessBtn');
     var accessPanel = document.getElementById('accessPanel');
-    var body = document.body;
 
     if (!accessBtn || !accessPanel) return;
 

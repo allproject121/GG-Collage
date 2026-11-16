@@ -21,20 +21,16 @@
 .glass-card {
   position: relative;
   z-index: 1;
-  background: var(--glass-background);
-  backdrop-filter: blur(var(--blur-md));
-  -webkit-backdrop-filter: blur(var(--blur-md));
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-lg);
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
   padding: 1.5rem;
-  will-change: transform;
-  transition: transform var(--motion-normal) var(--ease-standard),
-              box-shadow var(--motion-normal) var(--ease-standard),
-              border-color var(--motion-normal) var(--ease-standard);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 .glass-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   border-color: var(--color-gold);
 }
 @supports not (backdrop-filter: blur(1px)) {
@@ -265,12 +261,10 @@
   left: 0;
   right: 0;
   z-index: 998;
-  background: var(--glass-background-strong);
-  backdrop-filter: blur(var(--blur-md));
-  -webkit-backdrop-filter: blur(var(--blur-md));
+  background: #ffffff;
   border-top: 1px solid var(--color-border);
   padding: 0.5rem 0;
-  box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 -4px 15px rgba(0,0,0,0.08);
 }
 .mobile-action-bar-inner {
   display: flex;
@@ -478,3 +472,44 @@
   opacity: 1;
   visibility: visible;
 }
+
+/* ===== GALLERY FILTERS & CARDS ===== */
+.gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0 2rem;
+}
+.gallery-filter-btn {
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-gold);
+  background: var(--color-surface);
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all var(--motion-normal) var(--ease-standard);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.gallery-filter-btn:hover {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+.gallery-filter-btn.active {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 12px rgba(13, 37, 66, 0.25);
+}
+.gallery-album-section {
+  transition: opacity 0.3s ease;
+}
+

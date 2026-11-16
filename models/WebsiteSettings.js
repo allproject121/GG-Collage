@@ -19,6 +19,7 @@ const websiteSettingsSchema = new mongoose.Schema({
   metaTitle: { type: String, default: '', maxlength: 300 },
   metaDescription: { type: String, default: '', maxlength: 1000 },
   metaKeywords: { type: String, default: '', maxlength: 1000 },
+  gaId: { type: String, default: '', maxlength: 100 },
   // Theme & effects
   themeStyle: { type: String, enum: ['classic', 'modern', 'premium'], default: 'premium' },
   animationLevel: { type: String, enum: ['off', 'minimal', 'standard', 'enhanced'], default: 'standard' },

@@ -142,7 +142,8 @@
   // ===== DUPLICATE SUBMIT PREVENTION =====
   function initDuplicateSubmitPrevention() {
     document.querySelectorAll('form').forEach(function(form) {
-      form.addEventListener('submit', function() {
+      form.addEventListener('submit', function(e) {
+        if (e.defaultPrevented) return;
         var btn = this.querySelector('button[type="submit"]');
         if (btn && !btn.classList.contains('btn-loading')) {
           btn.classList.add('btn-loading');

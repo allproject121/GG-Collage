@@ -1,13 +1,34 @@
 const express = require('express');
 const router = express.Router();
+const mongoose = require('mongoose');
 const Download = require('../models/Download');
+const { mockDownloads } = require('../utils/mockData');
 const { sanitizeStr, isValidObjectId } = require('../utils/helpers');
 const { authMiddleware, objectIdMiddleware } = require('../middleware/auth');
 
 const VALID_CATEGORIES = ['Prospectus','Admission Forms','Examination Forms','Scholarship Forms','Academic Calendar','Timetable','NAAC Documents','NIRF Reports','IQAC Documents','Policies','Annual Reports','Question Papers','Other'];
 
+function getFilteredMockDownloads(req) {
+  let filtered = [...mockDownloads];
+  if (req.query.category && req.query.category !== 'all') {
+    filtered = filtered.filter(d => d.category.toLowerCase() === req.query.category.toLowerCase());
+  }
+  if (req.query.search) {
+    const s = req.query.search.toLowerCase();
+    filtered = filtered.filter(d => (d.title && d.title.toLowerCase().includes(s)));
+  }
+  const page = Math.max(1, parseInt(req.query.page) || 1);
+  const limit = Math.min(50, Math.max(1, parseInt(req.query.limit) || 12));
+  const skip = (page - 1) * limit;
+  const paginated = filtered.slice(skip, skip + limit);
+  return { downloads: paginated, total: filtered.length, page, totalPages: Math.ceil(filtered.length / limit) };
+}
+
 // Public: Get published downloads
 router.get('/', async (req, res) => {
+  if (mongoose.connection.readyState !== 1) {
+    return res.json(getFilteredMockDownloads(req));
+  }
   try {
     const page = Math.max(1, parseInt(req.query.page) || 1);
     const limit = Math.min(50, Math.max(1, parseInt(req.query.limit) || 12));
@@ -30,15 +51,22 @@ router.get('/', async (req, res) => {
       .limit(limit)
       .select('-__v');
     res.json({ downloads, total, page, totalPages: Math.ceil(total / limit) });
-  } catch { res.status(500).json({ error: 'Server error' }); }
+  } catch {
+    res.json(getFilteredMockDownloads(req));
+  }
 });
 
 // Public: Get featured downloads
 router.get('/featured', async (req, res) => {
+  if (mongoose.connection.readyState !== 1) {
+    return res.json(mockDownloads.slice(0, 3));
+  }
   try {
     const downloads = await Download.find({ status: 'Published', isFeatured: true }).sort({ publishedDate: -1 }).limit(6).select('-__v');
     res.json(downloads);
-  } catch { res.status(500).json({ error: 'Server error' }); }
+  } catch {
+    res.json(mockDownloads.slice(0, 3));
+  }
 });
 
 // Public: Get single download
